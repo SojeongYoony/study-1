@@ -382,16 +382,21 @@ console.log(map2);
 <br>
 
 ### Array.prototype.some
-* 배열 안의 어떤 요소라도 주어진 판별 함수를 통과하는지 테스트 한다.
-* 빈 배열에서 호출하면 무조건 false 반환.
+<ul>
+	<li>배열 안의 <b>어떤</b> 요소라도 주어진 판별 함수를 통과하는지 테스트</li>
+	<li>Boolean 값을 반환한다.(빈 배열에서 호출하면 무조건 false를 반환)</li>
+	<li>하나만 통과돼도 true</li>
+</ul>
 
 <br>
 <hr>
 <br>
 
 ### Array.prototype.every
-* 배열 안의 모든 요소가 주어진 판별 함수를 통과하는지 테스트 한다.
-* Boolean 값을 반환한다.(빈 배열에서 호출하면 무조건 true를 반환)
+<ul>
+	<li>배열 안의 <b>모든</b> 요소가 주어진 판별 함수를 통과하는지 테스트 한다.</li>
+	<li>Boolean 값을 반환한다.(빈 배열에서 호출하면 무조건 true를 반환)</li>
+</ul>
 
 ###### 문법
 ```javascript
