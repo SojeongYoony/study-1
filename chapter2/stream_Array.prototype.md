@@ -440,19 +440,27 @@ every(function callbackFn(element, index, array) { ... }, thisArg)
 ```
 
 #### every() VS some() 
-
-<div width="500px">
-
 ```javascript
 
+const apple = new Fruit('apple', 2000);
+const banana = new Fruit('banana', 1500);
+
+const tst1 = fruits.every/some(element => element.product == 'apple');
+console.log('tst1: ' + tst1); // every : false  / some : true
+
+const tst2 = fruits.every/some(element => element.product == 'apple' || element.product == '사과');
+console.log('tst2 : ' + tst2); // every : false / some : true
+
+const tst3 = fruits.every/some(element => element.product == 'apple' || element.price == 1500);
+console.log('tst3 : ' + tst3); // every : true  / some : true
+
+const tst4 = fruits.every/some(element => element.price == 1500 && element.product == 'apple');
+console.log('tst4 : ' + tst4);	// every : false  /  some : false
+
+const tst5 = fruits.every/some(element => element.price === '1500');
+console.log('tst5 : ' + tst5);	// every : false  /  some : false
+
 ```
-
-</div>
-
-<div width="500px">
-</div>
-
-
 
 <br>
 <hr>
