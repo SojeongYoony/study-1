@@ -386,6 +386,31 @@ console.log(map2);
 * Boolean 값을 반환한다.(빈 배열에서 호출하면 무조건 false를 반환)
 * 하나만 통과돼도 true
 
+###### 예제
+```javascript
+const array = [1, 2, 3, 4, 5];
+// checks whether an element is even
+const even = (element) => element % 2 === 0;
+console.log(array.some(even));
+
+```
+
+###### 문법 - 10보다 큰지 판별하기 
+###### 선언적 함수
+```javascript
+function isBiggerThan10(element, index, array) {
+  return element > 10;
+}
+console.log( [2, 5, 8, 1, 4].some(isBiggerThan10) );  // false
+console.log( [12, 5, 8, 1, 4].some(isBiggerThan10) ); // true
+```
+
+####### 화살표함수
+```javascript
+console.log( [2, 5, 8, 1, 4].some(fls => fls > 10) ); // false
+console.log( [12, 5, 8, 1, 4].some(tru => tru > 10) ); // true
+```
+
 <br>
 <hr>
 <br>

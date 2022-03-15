@@ -16,7 +16,24 @@
 	</ul>
 	
 <script>
+// 예제
+const array = [1, 2, 3, 4, 5];
+// checks whether an element is even
+const even = (element) => element % 2 === 0;
+console.log(array.some(even));
 
+// 10보다 큰지 판별
+
+// 선언적 함수
+function isBiggerThan10(element, index, array) {
+  return element > 10;
+}
+console.log( [2, 5, 8, 1, 4].some(isBiggerThan10) );  // false
+console.log( [12, 5, 8, 1, 4].some(isBiggerThan10) ); // true
+
+// 화살표 함수
+console.log( [2, 5, 8, 1, 4].some(fls => fls > 10) ); // false
+console.log( [12, 5, 8, 1, 4].some(tru => tru > 10) ); // true
 
 </script>
 
