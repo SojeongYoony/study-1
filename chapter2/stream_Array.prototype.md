@@ -405,7 +405,7 @@ console.log( [2, 5, 8, 1, 4].some(isBiggerThan10) );  // false
 console.log( [12, 5, 8, 1, 4].some(isBiggerThan10) ); // true
 ```
 
-####### 화살표함수
+###### 화살표함수
 ```javascript
 console.log( [2, 5, 8, 1, 4].some(fls => fls > 10) ); // false
 console.log( [12, 5, 8, 1, 4].some(tru => tru > 10) ); // true

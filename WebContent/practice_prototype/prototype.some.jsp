@@ -35,6 +35,41 @@ console.log( [12, 5, 8, 1, 4].some(isBiggerThan10) ); // true
 console.log( [2, 5, 8, 1, 4].some(fls => fls > 10) ); // false
 console.log( [12, 5, 8, 1, 4].some(tru => tru > 10) ); // true
 
+
+// 연습
+const ex1 = ['a', 'b', 'c', 'd', 'e'];
+const result1 = ex1.some(element => element.includes('a' || 'c'));
+console.log(result1); // true
+
+const result2 = ex1.some(element => element.includes('가'));
+console.log(result2); // false
+
+const result4 = ex1.some(element => element.includes('가') || element.includes('a'));
+console.log(result4); // true
+
+
+function Fruit (product, price) {
+	this.product = product;
+	this.price = price;
+}
+const apple = new Fruit('apple', 2000);
+const banana = new Fruit('banana', 1500);
+
+let fruits = []
+fruits.push(apple, banana);
+console.log(fruits);
+
+console.log(fruits[0].product === 'apple');
+
+
+
+fruits.forEach(function (fruit, i){
+	console.log(i + '번째 : ' + fruit.product);
+})
+
+
+
+
 </script>
 
 </body>
