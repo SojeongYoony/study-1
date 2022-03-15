@@ -361,6 +361,11 @@ console.log(map1);
 
 ###### 연습
 ```javascript
+
+const str1 = ['가', '나', '다', '라'];
+const str2 = str1.map(aa=> aa + '헤헤');
+console.log(str2); // '가헤헤', '나헤헤', '다헤헤', '라헤헤'
+
 const array2 = [];
 for (let i = 0; i < 9; i++) {
 	array2.push(i + 1);
