@@ -4,16 +4,37 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>filter</title>
+<title>map</title>
 </head>
 <body>
 
 	<h1>prototype.map</h1>
+	<ul>
+		<li>배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환</li>	
+	</ul>
 	
+	<div id="box5"></div>
 <script>
 
+// 예제
+const array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const map1 = array1.map(x => x * 2);
+console.log(map1);
+
+
+// 연습
+const array2 = [];
+for (let i = 0; i < 9; i++) {
+	array2.push(i + 1);
+}
+console.log(array2);
+
+const map2 = array1.map(x => array2.map( y => y * x));
+console.log(map2);
 
 </script>
+
+
 
 </body>
 </html>
