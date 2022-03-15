@@ -468,3 +468,11 @@ console.log('tst5 : ' + tst5);	// every : false  /  some : false
 
 ### Array.prototype.reduce
 * 배열의 각 요소에 대해 주어진 리듀서(reducer) 함수를 실행하고, 하나의 결과값을 반환.
+	* -> 말그대로 배열을 reduce 함.
+	* **리듀서(reducer)** 함수는 네 개의 인자를 가짐(누산기(acc), 현재값(cur), 현재 인덱스(idx), 원본 배열(src)
+		* `accumulator` 콜백의 반환값을 누적. `initialValue`를 제공한 경우 `initialValue`의 값
+	
+###### 문법
+```javascript
+
+```

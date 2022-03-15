@@ -36,6 +36,8 @@ console.log(array2);
 const map2 = array1.map(x => array2.map( y => y * x));
 console.log(map2);
 
+
+
 </script>
 
 

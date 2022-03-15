@@ -14,6 +14,9 @@
 
 const fruits = ['apple', 'banana', 'pineapple', 'apricot', 'kiwi'];
 console.log('---- 화살표 함수 연습하기 ----');
+// () => {} // { return a } : 중괄호 안에 return을 무조건 써야 함
+// () => a 					: return을 안써도 그 코드 자체가 return라는 암묵적인 룰이 있다.
+
 const result1 = fruits.filter(word => word.length > 6); // ['pineapple', 'apricot'] 
 console.log(result1);
 
@@ -89,10 +92,8 @@ let isTrue = staffs.filter( element => element.name === '지민' && element.age 
 console.log(typeof(isTrue));
 console.log( !isTrue ); // false
 
-
 console.log('--- temp 확인하기. ---');
 console.log(temp);
-
 
 console.log('---- slice -----');
 let tempStaff = staffs.slice(3, staffs.length);
