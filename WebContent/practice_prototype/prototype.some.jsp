@@ -58,13 +58,28 @@ const banana = new Fruit('banana', 1500);
 let fruits = []
 fruits.push(apple, banana);
 console.log(fruits);
-
 console.log(fruits[0].product === 'apple');
 
+console.log('----- some 연습 -----');
+const tst1 = fruits.some(element => element.product == 'apple');
+console.log('tst1: ' + tst1);
 
+const tst2 = fruits.some(element => element.product == 'apple' || elemnet.product == '사과');
+console.log('tst2 : ' + tst2);
 
+const tst3 = fruits.some(element => element.product == 'apple' || elemnet.price == 1500);
+console.log('tst3 : ' + tst3);
+
+const tst4 = fruits.some(element => element.price == 1500 && element.product == 'apple');
+console.log('tst4 : ' + tst4);
+
+const tst5 = fruits.some(element => element.price === '1500');
+console.log('tst5 : ' + tst5);
+
+console.log('----- forEach 연습 -----');
 fruits.forEach(function (fruit, i){
 	console.log(i + '번째 : ' + fruit.product);
+	
 })
 
 
