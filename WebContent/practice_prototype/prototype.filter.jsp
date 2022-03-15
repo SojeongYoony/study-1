@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<h1>protype.filter</h1>
+	<h1>prototype.filter</h1>
 	
 <script>
 
@@ -29,6 +29,7 @@ function aa(fruit) {
 }
 
 const result3 = fruits.filter(aa);
+
 console.log(result3);
 
 console.log('---- apple을 포함하고 있는 요소 ----');
@@ -84,7 +85,7 @@ for (let i = 0; i < staffs.length; i ++) {
 
 
 console.log('--- filter써보기 ---');
-let isTrue = staffs.filter( element => element.name === '지민' && element.age === 29 ); // false
+let isTrue = staffs.filter( element => element.name === '지민' && element.age === 29 ); // true
 console.log(typeof(isTrue));
 console.log( !isTrue ); // false
 
