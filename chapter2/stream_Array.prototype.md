@@ -439,10 +439,20 @@ every(function callbackFn(element, index, array){ ... })
 every(function callbackFn(element, index, array) { ... }, thisArg)
 ```
 
-###### [연습]()
+#### every() VS some() 
+
+<div width="500px">
+
 ```javascript
 
 ```
+
+</div>
+
+<div width="500px">
+</div>
+
+
 
 <br>
 <hr>

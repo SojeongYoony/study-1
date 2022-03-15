@@ -62,19 +62,19 @@ console.log(fruits[0].product === 'apple');
 
 console.log('----- some 연습 -----');
 const tst1 = fruits.some(element => element.product == 'apple');
-console.log('tst1: ' + tst1);
+console.log('tst1: ' + tst1); // true
 
-const tst2 = fruits.some(element => element.product == 'apple' || elemnet.product == '사과');
-console.log('tst2 : ' + tst2);
+const tst2 = fruits.some(element => element.product == 'apple' || element.product == '사과');
+console.log('tst2 : ' + tst2); // true
 
-const tst3 = fruits.some(element => element.product == 'apple' || elemnet.price == 1500);
-console.log('tst3 : ' + tst3);
+const tst3 = fruits.some(element => element.product == 'apple' || element.price == 1500);
+console.log('tst3 : ' + tst3); // true
 
 const tst4 = fruits.some(element => element.price == 1500 && element.product == 'apple');
-console.log('tst4 : ' + tst4);
+console.log('tst4 : ' + tst4); // false
 
 const tst5 = fruits.some(element => element.price === '1500');
-console.log('tst5 : ' + tst5);
+console.log('tst5 : ' + tst5); // false
 
 console.log('----- forEach 연습 -----');
 fruits.forEach(function (fruit, i){
