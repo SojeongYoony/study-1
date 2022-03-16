@@ -53,9 +53,10 @@ whatYourName('sojeong', finishFunc); // 여기서 처럼 finishFunc()가 아닌 
 <br><br>
 
 
-- 자바와 자바스크립트의 구현방법 차이
 
 <hr>
+
+- 자바와 자바스크립트의 구현방법 차이
 
 ## callBack [`java`](https://github.com/SojeongYoony/study-1/blob/main/src/study/CallBack.java)
 * 어떠한 행위를 하면 자동으로 실행되는 함수
