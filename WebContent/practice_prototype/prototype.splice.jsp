@@ -59,6 +59,40 @@
 		
 		console.log(JSON.stringify(foods));
 		console.log(typeof(foods) == 'object' ? true : false);
+		
+		
+		
+let arguments = [];
+
+console.log(arguments);
+
+function func1(a, b, c) {
+	  console.log(arguments[0]);
+	  // expected output: 1
+
+	  console.log(arguments[1]);
+	  // expected output: 2
+
+	  console.log(arguments[2]);
+	  // expected output: 3
+	  
+	  arguments.forEach(function(element, i) {
+		  i.push(element);
+	  });
+	  
+	}
+
+	func1(1, 2, 3);
+
+	console.log(arguments);
+	
+var args = Array.prototype.slice.call(arguments);
+var args = [].slice.call(arguments);
+console.log(args);		
+
+var args = Array.from(arguments);
+var args = [...arguments];
+console.log(args);
 	</script>
 	
 </body>

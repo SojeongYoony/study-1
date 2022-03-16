@@ -253,8 +253,8 @@ array.fill(채울 값, 시작 인덱스, 마지막 인덱스);
 
 ###### 문법
 ```javascript
-forEach(배열, function(idx, 요소){});
-(요소).forEach(배열, function(idx, 요소){});
+forEach(배열, function(요소, idx){});
+(요소).forEach(배열, function(요소, idx){});
 ```
 ###### 예시 / [연습](https://github.com/SojeongYoony/study-1/blob/main/WebContent/practice_prototype/prototype.forEach.jsp)
 ```javascript
