@@ -472,9 +472,46 @@ console.log('tst5 : ' + tst5);	// every : false  /  some : false
 	* **리듀서(reducer)** 함수는 네 개의 인자를 가짐(누산기(acc), 현재값(cur), 현재 인덱스(idx), 원본 배열(src)
 		* `accumulator` 콜백의 반환값을 누적. `initialValue`를 제공한 경우 `initialValue`의 값
 		* `currentValue` 처리할 현재 요소
-		* `currentIndex` 
-	
+		* `currentIndex` 처리할 현재 요소의 인덱스. `initalValue`제공 시, 0 아니면 1
+		* `array` reduce()를 호출한 배열
+		* `initalValue` 초기값. 보통 초기값을 주는 것이 안전 함.
+		* 배열이 비어있는데 `initalValue` 미제공 시, `TypeError`발생
+		
+			
 ###### 문법
 ```javascript
-
+	배열.reduce(function (acc, curVal, curIdx, array) {
+		return __리턴할 식__;
+	},(initialValue));
 ```
+* accumulator : 누적 값 : preVal -> 이전 값
+* currentValue : 현재 값
+* currentIndex : 현재 인덱스
+* initalValue : 초기 값
+	* initalValue가 존재할 경우 preVal = initalValue가 되고
+	* initalValue가 존재하지 않을 경우 preVal = 0번째 idx가 됨
+	
+######비교 `initalValue` 존재할 경우 / `initalValue` 존재하지 않을 경우
+	
+	```javascript
+	
+		const array = [1, 2, 3, 4, 5];
+		array.reduce((prev, cur) => prev + cur, 10);
+	// 1st : prev : 10, cur : 1 = 11
+	// 2nd : prev : 11, cur : 2 = 13	
+	// 3rd : prev : 13, cur : 3 = 16 
+	// 4th : prev : 16, cur : 4 = 20
+	// 5th : prev : 20, cur : 5 = 25
+	// return 25;
+	```
+	```javascript
+	
+		const array = [1, 2, 3, 4, 5];
+		array.reduce((prev, cur) => prev + cur);
+	// 1st : prev :   , cur : 1 =  1
+	// 2nd : prev :  1, cur : 2 =  3	
+	// 3rd : prev :  3, cur : 3 =  6
+	// 4th : prev :  6, cur : 4 = 10
+	// 5th : prev : 10, cur : 5 = 15
+	// return 15;
+	```

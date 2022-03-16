@@ -9,8 +9,18 @@
 <body>
 	<h1>prototype.reduce</h1>
 	
-	<script>
-	</script>
+	
+<script>
+
+const fruits = ["apple", "banana", "cherry", "pineapple"];
+
+const result = fruits.reduce((prev, cur, index) => {
+  return index % 2 === 0 ? [...prev, cur] : prev;
+}, []);
+
+console.log(result);
+
+</script>
 	
 </body>
 </html>
