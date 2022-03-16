@@ -8,6 +8,10 @@
 * 자바스크립트는 `null`과 `undefined` 타입을 제외하고 모든 것을 객체로 다룸
 	-> 함수를 변수 또는 다른 함수의 변수처럼 사용할 수 있음.
 
+```textplain
+	`JavaScript Data Type`
+	- number, string, boolean, object,(function, array, data, regexp), null, undefined
+```
 
 ###### 콜백 예제 
 `javascript`
@@ -16,7 +20,7 @@
 
 // ex) Callback Function - forEach (화살표 함수)
 let number = [1, 2, 3, 4, 5];
-number.forEach(x => console.log(x*2);
+number.forEach(x => console.log(x*2));
 
 // ex) Callback Function - forEach (익명함수)
 number.forEach(function(x){
@@ -33,12 +37,10 @@ function finishFunc() {
 console.log('finish function');
 }
 
-whatYourName('sojeong', finishFunc);
+whatYourName('sojeong', finishFunc); // 여기서 처럼 finishFunc()가 아닌 함수명만 써도 된다.
 
 
 ```
-
-
 
 - 자바와 자바스크립트의 구현방법 차이
 - Array.prototype.reverseForeach  
