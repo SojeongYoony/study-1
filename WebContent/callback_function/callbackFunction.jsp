@@ -42,15 +42,25 @@ function callbackFunc(callback) {
     let vegetable = "tomato";	// Local Variable
     callback(vegetable);
 }
+console.log(callbackFunc.name.tostring);
+console.log(callbackFunc.statements);
+console.log(callbackFunc.param);
+
+
 
 function eat(vegetable) {
     console.log(`fruit: ${fruit}`);
    	console.log(`vegetable: ${vegetable}`);
+   	//
 }
 
 callbackFunc(eat);
 
 
 </script>
+
+<h1>CallbackFunction</h1>
+
+
 </body>
 </html>
