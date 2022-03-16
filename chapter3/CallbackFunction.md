@@ -7,16 +7,17 @@
 
 
 ## callBack `javaScript`
-* 파라미터로 함수를 전달하는 함수
+* 파라미터로 함수를 전달하는 함수 <br>
 	-> **파라미터로 함수를 전달**받아, 함수의 내부에서 실행하는 함수이다.
-* 콜백함수는 이름이 없는 '익명의 함수'를 사용한다.
+* 콜백함수는 이름이 없는 '익명의 함수'를 사용한다. <br>
 	-> **함수의 내부**에서 실행되기 때문에 이름을 붙이지 않아도 됨.
-* 자바스크립트는 `null`과 `undefined` 타입을 제외하고 모든 것을 객체로 다룸
+* 자바스크립트는 `null`과 `undefined` 타입을 제외하고 모든 것을 객체로 다룸 <br>
 	-> 함수를 변수 또는 다른 함수의 변수처럼 사용할 수 있음.
 
 
+`JavaScript Data Type`
+
 ```textplain
-	`JavaScript Data Type`
 	- number, string, boolean, object,(function, array, data, regexp), null, undefined
 ```
 
@@ -48,6 +49,10 @@ whatYourName('sojeong', finishFunc); // 여기서 처럼 finishFunc()가 아닌 
 
 
 ```
+
+
+<br><br>
+
 
 - 자바와 자바스크립트의 구현방법 차이
 
