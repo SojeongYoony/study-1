@@ -493,31 +493,29 @@ console.log('tst5 : ' + tst5);	// every : false  /  some : false
 	* initalValue가 존재할 경우 preVal = initalValue가 되고
 	* initalValue가 존재하지 않을 경우 preVal = 0번째 idx가 됨
 	
-###### 비교 `initalValue` 존재할 경우 / `initalValue` 존재하지 않을 경우
+###### 비교 : `initalValue` 존재할 경우 / `initalValue` 존재하지 않을 경우
 	
-	
-	```javascript
-	
-		const array = [1, 2, 3, 4, 5];
-		array.reduce((prev, cur) => prev + cur, 10);
-	// 1st : prev : 10, cur : 1 = 11
-	// 2nd : prev : 11, cur : 2 = 13	
-	// 3rd : prev : 13, cur : 3 = 16 
-	// 4th : prev : 16, cur : 4 = 20
-	// 5th : prev : 20, cur : 5 = 25
-	// return 25;
-	```
-	
-	```javascript
-	
-		const array = [1, 2, 3, 4, 5];
-		array.reduce((prev, cur) => prev + cur);
-	// 1st : prev :   , cur : 1 =  1
-	// 2nd : prev :  1, cur : 2 =  3	
-	// 3rd : prev :  3, cur : 3 =  6
-	// 4th : prev :  6, cur : 4 = 10
-	// 5th : prev : 10, cur : 5 = 15
-	// return 15;
-	```
+
+```javascript
+	const array = [1, 2, 3, 4, 5];
+	array.reduce((prev, cur) => prev + cur, 10);
+// 1st : prev : 10, cur : 1 = 11
+// 2nd : prev : 11, cur : 2 = 13	
+// 3rd : prev : 13, cur : 3 = 16 
+// 4th : prev : 16, cur : 4 = 20
+// 5th : prev : 20, cur : 5 = 25
+// return 25;
+```
+
+```javascript
+	const array = [1, 2, 3, 4, 5];
+	array.reduce((prev, cur) => prev + cur);
+// 1st : prev :   , cur : 1 =  1
+// 2nd : prev :  1, cur : 2 =  3	
+// 3rd : prev :  3, cur : 3 =  6
+// 4th : prev :  6, cur : 4 = 10
+// 5th : prev : 10, cur : 5 = 15
+// return 15;
+```
 
 ###### [연습](https://github.com/SojeongYoony/study-1/blob/main/WebContent/practice_prototype/prototype.reduce.jsp)
