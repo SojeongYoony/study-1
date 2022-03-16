@@ -256,7 +256,7 @@ array.fill(채울 값, 시작 인덱스, 마지막 인덱스);
 forEach(배열, function(idx, 요소){});
 (요소).forEach(배열, function(idx, 요소){});
 ```
-###### 예시
+###### 예시 / [연습](https://github.com/SojeongYoony/study-1/blob/main/WebContent/practice_prototype/prototype.forEach.jsp)
 ```javascript
 const array1 = ['a', 'b', 'c', 'd', 'e'];
 
