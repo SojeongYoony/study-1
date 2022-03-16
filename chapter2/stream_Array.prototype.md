@@ -359,7 +359,7 @@ console.log(map1);
 
 ```
 
-###### 연습
+###### [연습](https://github.com/SojeongYoony/study-1/blob/main/WebContent/practice_prototype/prototype.map.jsp)
 ```javascript
 
 const str1 = ['가', '나', '다', '라'];
@@ -395,7 +395,7 @@ console.log(array.some(even));
 
 ```
 
-###### 문법 - 10보다 큰지 판별하기 
+###### 문법 - 10보다 큰지 판별하기 / [연습](https://github.com/SojeongYoony/study-1/blob/main/WebContent/practice_prototype/prototype.some.jsp)
 ###### 선언적 함수
 ```javascript
 function isBiggerThan10(element, index, array) {
@@ -438,6 +438,8 @@ every(function callbackFn(element, index) { ... })
 every(function callbackFn(element, index, array){ ... })
 every(function callbackFn(element, index, array) { ... }, thisArg)
 ```
+
+###### [연습](https://github.com/SojeongYoony/study-1/blob/main/WebContent/practice_prototype/prototype.every.jsp)
 
 #### every() VS some() 
 ```javascript
@@ -515,3 +517,5 @@ console.log('tst5 : ' + tst5);	// every : false  /  some : false
 	// 5th : prev : 10, cur : 5 = 15
 	// return 15;
 	```
+
+###### [연습](https://github.com/SojeongYoony/study-1/blob/main/WebContent/practice_prototype/prototype.reduce.jsp)
