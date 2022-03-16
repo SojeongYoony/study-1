@@ -493,7 +493,8 @@ console.log('tst5 : ' + tst5);	// every : false  /  some : false
 	* initalValue가 존재할 경우 preVal = initalValue가 되고
 	* initalValue가 존재하지 않을 경우 preVal = 0번째 idx가 됨
 	
-######비교 `initalValue` 존재할 경우 / `initalValue` 존재하지 않을 경우
+###### 비교 `initalValue` 존재할 경우 / `initalValue` 존재하지 않을 경우
+	
 	
 	```javascript
 	
@@ -506,6 +507,7 @@ console.log('tst5 : ' + tst5);	// every : false  /  some : false
 	// 5th : prev : 20, cur : 5 = 25
 	// return 25;
 	```
+	
 	```javascript
 	
 		const array = [1, 2, 3, 4, 5];
