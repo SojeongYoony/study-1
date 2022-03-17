@@ -42,11 +42,6 @@ function callbackFunc(callback) {
     let vegetable = "tomato";	// Local Variable
     callback(vegetable);
 }
-console.log(callbackFunc.name.tostring);
-console.log(callbackFunc.statements);
-console.log(callbackFunc.param);
-
-
 
 function eat(vegetable) {
     console.log(`fruit: ${fruit}`);
@@ -90,7 +85,6 @@ function bbb(callback, age) {
 
 function ccc(sentence) {
 	console.log(sentence);
-	sentence;
 }
 
 aaa(bbb, '윤소정');
