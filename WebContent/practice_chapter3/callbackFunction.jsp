@@ -46,6 +46,7 @@ function callbackFunc(callback) {
 function eat(vegetable) {
     console.log(`fruit: ${fruit}`);
    	console.log(`vegetable: ${vegetable}`);
+   	// 
 }
 callbackFunc(eat);
 
