@@ -3,10 +3,11 @@ package study;
 public class CallBack {
 	public static void main(String[] args) {
 
-		Callback_method(); // 결과 : "callback 함수 실행"
+		 Callback_method(); // 결과 : "callback 함수 실행"
+		 First_Method();
 	}
 
-	public void First_Method() {
+	public static void First_Method() {
 		Callback_method();
 	}
 	
