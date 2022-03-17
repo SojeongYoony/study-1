@@ -54,11 +54,13 @@ whatYourName('sojeong', finishFunc); // 여기서 처럼 finishFunc()가 아닌 
 <br><br>
 <hr>
 
-## callBack [`java`](https://github.com/SojeongYoony/study-1/blob/main/src/study/CallBack.java)
-* 어떠한 행위를 하면 자동으로 실행되는 함수
+## callBack [`java`]
+* 어떠한 행위를 하면 자동으로 실행되는 함수 <br>
+	-> 피호출자(Callee)가 호출자(Caller)를 다시 호출하는 것
+* 비동기적 처리를 하기 위한 디자인 패턴의 종류
 
-###### 예시
-```java
+###### 예시  / [연습](https://github.com/SojeongYoony/study-1/blob/main/src/study/CallBack.java)
+```java 
 
 public void First_Method() {
 	callback_method();

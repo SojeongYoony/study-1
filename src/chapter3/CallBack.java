@@ -1,4 +1,4 @@
-package study;
+package chapter3;
 
 public class CallBack {
 	public static void main(String[] args) {
@@ -24,4 +24,5 @@ public class CallBack {
 	//		Static 메소드와 Non-static 메소드는 다른 메모리 영역에 생성되어 동작된다.
 	//		Static 메소드는 정적 데이터 영역 / Non-static 메소드는 스택에 생성
 	// 따라서 모든 메서드나 필드를 static 멤버로 바꾸거나 클래스의 객체를 직접 생성하여 접근하는 방법으로 우회해야 함.
+
 }
