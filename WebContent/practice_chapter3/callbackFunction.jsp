@@ -46,7 +46,7 @@ function callbackFunc(callback) {
 function eat(vegetable) {
     console.log(`fruit: ${fruit}`);
    	console.log(`vegetable: ${vegetable}`);
-   	// 
+   	// ES6문법:  백틱(`)을 사용하여 문자열 내에서 변수를 사용할 수 있음
 }
 callbackFunc(eat);
 
