@@ -76,21 +76,24 @@ howMany(function() {
 
 */
 
+
+console.log('--- callBack Function ---');
+
+aaa(bbb, '윤소정');
 function aaa(callback, name) {
 	console.log('내 이름 ' + name + '이다');
+	callback(ccc, 29);
 }
 
 function bbb(callback, age) {
-	console.log('내 나이 ' + age + '살 이다.')
+	console.log('내 나이 ' + age + '살 이다.');
+	callback('반갑다');
 }
 
 function ccc(sentence) {
 	console.log(sentence);
 }
 
-aaa(bbb, '윤소정');
-bbb(ccc, 29);
-ccc('반갑당~');
 </script>
 
 
