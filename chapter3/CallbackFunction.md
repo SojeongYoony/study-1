@@ -80,7 +80,10 @@ public void Callback_Method() {
 
 <hr>
 
-## Array.prototype.reverseForeach  
+## Array.prototype.reverseForeach 
+* 배열의 순서를 반전한다. 
+* 첫 번째 요소는 마지막 요소가 되며 마지막 요소는 첫 번째 요소가 된다.
+
   자신의 생각으로 구현해보기  
   현재 순환 인덱스를 반환하기  
   콜백함수의 반환값이 true면, 반복 중단하기
