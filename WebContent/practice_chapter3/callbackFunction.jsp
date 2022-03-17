@@ -94,6 +94,20 @@ function ccc(sentence) {
 	console.log(sentence);
 }
 
+
+$('input').on('click keyup', function(){
+	
+})
+
+
+
+/*
+자신의 생각으로 구현해보기  
+현재 순환 인덱스를 반환하기  
+콜백함수의 반환값이 true면, 반복 중단하기
+*/
+
+
 </script>
 
 
