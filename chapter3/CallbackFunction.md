@@ -24,7 +24,7 @@
 ```
 
 ###### 콜백 예제 
-`javascript`
+`javascript` / [연습](https://github.com/SojeongYoony/study-1/blob/main/WebContent/practice_chapter3/callbackFunction.jsp)
 
 ```javascript
 
@@ -71,11 +71,12 @@ public void Callback_Method() {
 
 
 ## 자바와 자바스크립트의 구현방법 차이
+`javascript`
+* 자바스크립트에서는 파라미터로 함수를 전달하면 된다.
+
 `java`
 * 자바에서는 인터페이스(interface)를 통해 콜백 함수를 구현할 수 있다.
 
-`javascript`
-* 자바스크립트에서는 파라미터로 함수를 전달하면 된다.
 
 <hr>
 
