@@ -2,8 +2,8 @@
 
 ## 콜백함수(Callback Function)
 * 코드의 실행을 기다려주기 위해 존재하는 함수
-
-
+** 명시적으로 호출하는 함수가 아니라, 개발자는 단지 함수를 등록하기만 하고, ** 
+<u>어떤 이벤트가 발생했거나 특정 시점에 도달했을 때 시스템에서 호출하는 함수를 말한다.</u>
 
 ## callBack `javaScript`
 * 파라미터로 함수를 전달하는 함수 <br>
@@ -13,8 +13,6 @@
 * 자바스크립트는 `null`과 `undefined` 타입을 제외하고 모든 것을 객체로 다룸 <br>
 	-> 함수를 변수 또는 다른 함수의 변수처럼 사용할 수 있음.
 
-** 명시적으로 호출하는 함수가 아니라, 개발자는 단지 함수를 등록하기만 하고, ** 
-<u>어떤 이벤트가 발생했거나 특정 시점에 도달했을 때 시스템에서 호출하는 함수를 말한다.</u>
 
 
 `JavaScript Data Type`
@@ -58,19 +56,61 @@ whatYourName('sojeong', finishFunc); // 여기서 처럼 finishFunc()가 아닌 
 * 어떠한 행위를 하면 자동으로 실행되는 함수 <br>
 	-> 피호출자(Callee)가 호출자(Caller)를 다시 호출하는 것
 * 비동기적 처리를 하기 위한 디자인 패턴의 종류
+* 콜백함수가 등록되는 곳과 이벤트가 발생할 때 호출하는 것은 `서버`이다.
 
-###### 예시  / [연습](https://github.com/SojeongYoony/study-1/blob/main/src/study/CallBack.java)
+###### 예시  / [연습](https://github.com/SojeongYoony/study-1/tree/main/src/chapter3)
+
+##### 1. Callback Interface 생성
 ```java 
-
-public void First_Method() {
-	callback_method();
-}
-
-public void Callback_Method() {
-	System.out.println("콜백함수");
+// Callback.java
+public interface Callback {
+	void qrCheck(boolean check);
 }
 ```
 
+##### 2. Callee(피호출자)와 Caller(호출자) 구현
+`Caller`는 인터페이스로 생성한 콜백함수를 **override**하는 역할
+`Callee`는 **조건을 확인하고 콜백함수 호출**하는 역할
+
+```java
+// Callee.java  (listener)
+public class Callee {
+	Callback callback;
+	
+	public Callee(Callback callback) {
+		this.callback = callback;
+	}
+	
+	public void execute() throws InterruptedException {
+		for ( int i=1; i<=5; i++ ) {
+			callback.quCheck(false);
+			Thread.sleep(1000);
+		}
+		callback.quCheck(true);
+	}
+}
+
+```
+
+```java
+// Caller.java 
+public class Caller {
+    public static void main(String[] args) throws Exception {
+        Callback callback = new Callback() {
+            @Override
+            public void qrCheck(boolean check) {
+                if (check) {
+                    System.out.println("QRCode Checked!!");
+                } else {
+                    System.out.println("Waiting for Check QRCode...");
+                }
+            }
+        };
+        Callee callee = new Callee(callback);
+        callee.execute();
+    }
+}
+```
 
 ## 자바와 자바스크립트의 구현방법 차이
 `javascript`
