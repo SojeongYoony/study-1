@@ -1,6 +1,6 @@
 package chapter3;
 
-public class CallBack {
+public class CallBack1 {
 	public static void main(String[] args) {
 
 		 Callback_method(); // 결과 : "callback 함수 실행"
