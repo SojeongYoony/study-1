@@ -93,6 +93,19 @@
 			* 블록 스코프는 대부분의 프로그래밍에서 따르던 스코프이다. 
 			* `{}`으로 표현하며 block 밖에서 block 안 쪽에 있는 변수를 접근할 수 없다.
 			* 안쪽에서 밖으로의 접근은 가능하다.
+
+###### ES란?
+* ES는 ECMAScript의 약어
+* 따라서  ES + 숫자의 의미는 ECMAScript의 버전을 의미한다.
+
+###### ECMAScript
+* JavaScript는 원래 JAVA 홍보를 위해 지어진 이름임
+* 넷스케이프가 그 후 표준화를 위해 JavaScript를 ECMA 국제화기구에 제안
+* 그 결과로 ECMAScript라는 **새로운 언어 표준**이 나타남
+	=> JavaScript는 해당 표준(ECMAScript)의 구현체
+	=> JavaScript는 ECMAScript를 구현하고 빌드한다
+		* 다른 구현체들로는 SpiderMonkey, V8, ActionScript가 있다.
+
 		
  ### 호이스팅(Hoisting) `javascript`
  * 함수와 변수는 코드를 실행하기 전에 실행 컨텍스트를 위해 메모리에 저장 <br>
