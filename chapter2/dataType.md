@@ -66,8 +66,21 @@
  		console.log(e); //true
 ```
 
-###### 숫자 판별하기
+
+###### `typeOf` vs `instanceof`
 * typeOf : 어떤 종류의 값인지 판단할 때 사용함
+* instanceof : `prototype` 속성이 객체의 프로토타입 **체인 어딘지가 존재하는지 판별** <br>
+	-> `object`의 `prototype` 체인에 `constructor.prototype`이 존재하는지 판별
+
+###### 문법
+```javascript
+object instanceof constructor
+```
+* 매개변수 
+	`object` : 판별할 객체
+	`constructor` : 판별 목표 함수
+
+
  <br>
  <br>
 
