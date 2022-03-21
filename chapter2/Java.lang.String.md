@@ -71,6 +71,7 @@ System.out.println(sentence.lastIndexOf("World", 10)); // 5반환
 ###### 문법
 ```java
 String.substring(int beginIndex, int endIndex)
+String substring(int beginIndex)
 ```
 
 ###### 예제
