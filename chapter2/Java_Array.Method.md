@@ -1,4 +1,4 @@
-# `JAVA` Array prototype ( Stream )
+# `JAVA`  java.lang.String
 
 ## Array.prototype.indexOf
 * indexOf()와 lastIndexOf()는 String에서 특정 문자열의 인덱스를 찾는데 사용하는 메소드
