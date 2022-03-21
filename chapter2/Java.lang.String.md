@@ -83,6 +83,38 @@ System.out.println(sbSentence); // Hello
 System.out.println(sentence);   // HelloWorld_MyWorld
 ```
 
+## java.lang.String.replaceAll / replace
+
+###### `java.lang.String.replace` 문법
+```java
+string.replace(CharSequence target, CharSequence replacement)
+				// 찾을 문자열, 바꿀 문자열
+```
+
+###### `java.lang.String.replaceAll` 문법
+```java 
+string.replaceAll(String regex, String replacement)
+					// 정규식 또는 기존문자
+```
+
+###### `replaceAll` vs `replace`
+```java
+String str = "94-04-25";
+String result1 = str.replace("-", "");
+String result2 = str.replaceAll("-",""); 
+System.out.println("str : " + str);         // 94-04-25
+System.out.println("result1 : " + result1); // 940425
+System.out.println("result2 : " + result2); // 940425
+
+String ex = "안녕하세요. 반가워요. 또 놀러오세요.";
+String exResult1 = ex.replace(".", "^^");
+String exResult2 = ex.replaceAll(".", "^^");
+System.out.println(ex);        // 결과 : 안녕하세요. 반가워요. 또 놀러오세요.
+System.out.println(exResult1); // 결과 : 안녕하세요^^ 반가워요^^ 또 놀러오세요^^
+System.out.println(exResult2); // 결과 : ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+```
+**설명**
+
 ## Array.prototype.splice
 
 ## Array.prototype.join
