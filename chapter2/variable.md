@@ -76,7 +76,10 @@
 </div>
 </details>
 
-
+<p align="center">
+<img uri="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcpN7ly%2FbtqFMImMjbi%2FXax5yU47pHIffGGf6BYetk%2Fimg.jpg" width="40%">
+<img uri="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbrfyzo%2FbtqFMHahg20%2FO4al3vnYiNideb03m6xB60%2Fimg.jpg" width="40%">
+</p>
 
 
 <br>
