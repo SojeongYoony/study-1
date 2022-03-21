@@ -257,3 +257,29 @@ public static void main (String[] args) {
 </table>
 ```
 
+
+### 11. toggle list(접기/펼치기)
+* markdown에선 지원하지 않고 HTML의 `details`태그로 사용 가능
+* `div markdown="1"`은 jekyll에서 html사이에 markdown을 인식하기 위한 코드
+
+``` textplain
+<details>
+<summary>여기를 눌러주세요</summary>
+<div markdown="1">       
+
+😎숨겨진 내용😎
+
+</div>
+</details>
+```
+
+###### 보기
+
+<details>
+<summary>여기를 눌러주세요</summary>
+<div markdown="1">       
+
+😎숨겨진 내용😎
+
+</div>
+</details>
