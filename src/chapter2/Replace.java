@@ -13,7 +13,7 @@ public class Replace {
 		String ex = "안녕하세요. 반가워요. 또 놀러오세요.";
 		String exResult1 = ex.replace(".", "^^");
 		String exResult2 = ex.replaceAll(".", "^^");
-		System.out.println(ex);        // 결과 : 안녕하세요. 반가워요. 또 놀러오세요.
+		System.out.println(ex + "");        // 결과 : 안녕하세요. 반가워요. 또 놀러오세요.
 		System.out.println(exResult1); // 결과 : 안녕하세요^^ 반가워요^^ 또 놀러오세요^^
 		System.out.println(exResult2); // 결과 : ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 				
