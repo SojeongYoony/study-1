@@ -119,8 +119,78 @@ public class Caller {
 `java`
 * 자바에서는 인터페이스(interface)를 통해 콜백 함수를 구현할 수 있다.
 
-
+<br>
 <hr>
+<br>
+
+
+## 익명함수(anonymous function) vs 기명함수(named function)
+
+#### 익명함수(Anonymouse Function)
+* 사용자가 함수를 만들 때 이름을 정하지 않고 변수 혹은 호출만으로 선언
+
+###### 예시
+```javascript
+	let func = function(a, b) {
+	    let result = a + b;
+	    return result;
+	}
+	
+	console.log(func(1, 3)); // 4
+```
+⁉ 변수에 저장하여 익명함수를 사용할 수 있음. <br>
+	* 하지만 이것은 함수 자체에 이름이 있는 것이 아니라 단지 함수를 가지고 있는 변수에 불과함 <br>
+	
+
+#### 기명함수(Named Function)
+* 사용자가 이름을 지정한 함수
+* 선언적 함수라고도 부름
+
+###### 예시
+```javascript
+	function namedFunction(a, b) {
+		let result = a - b;
+		return result;
+	}
+	console.log(namedFunction(5, 1)); // 4
+```
+
+#### 익명함수와 기명함수의 차이
+* 익명함수는 브라우저가 런타임에 동적으로 선언되는 함수
+* 기명함수는 브라우저가 런타임 이전에 선언되는 함수
+
+###### 예시
+```javascript
+
+// 기명함수가 앞으로, 무명함수가 뒤로
+function func (){
+  console.log("기명 함수 입니다.");
+};
+var func = function(){
+  console.log("무명 함수 입니다.");
+}
+func(); 
+// 결과 : 무명 함수 입니다.
+
+
+// 무명함수가 앞으로, 기명함수가 뒤로
+var func2 = function(){
+  console.log("무명 함수 입니다.");
+}
+function func2 (){
+  console.log("기명 함수 입니다.");
+};
+func2(); 
+// 결과 : 무명 함수 입니다.
+```
+
+❗ 익명함수가 기명함수 이후에 실행이 되므로 익명함수가 실행되게 되는 것. <br>
+	-> 호이스팅과 연관이 있음 <br>
+따라서 두 함수의 차이는 런타임 이전에 실행되느냐, 런타임 이후에 실행되느냐이다.❗
+
+<br>
+<hr>
+<br>
 
 ## Array.prototype.reverseForeach 
 * 배열의 순서를 반전한다. 
