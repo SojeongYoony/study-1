@@ -1,4 +1,6 @@
-# `JAVA`  java.lang.String
+#### `JAVA`  java.lang.String
+
+<br><br>
 
 ## java.lang.String.indexOf(String str)
 * indexOf()와 lastIndexOf()는 String에서 특정 문자열의 인덱스를 찾는데 사용하는 메소드
@@ -67,6 +69,9 @@ System.out.println(sentence.lastIndexOf("World", 10)); // 5반환
 
 </details>
 
+
+<br><hr>
+
 ## java.lang.String.substring
 ###### 문법
 ```java
@@ -83,7 +88,9 @@ System.out.println(sbSentence); // Hello
 System.out.println(sentence);   // HelloWorld_MyWorld
 ```
 
-## java.lang.String.replaceAll / replace
+<br><hr>
+
+## java.lang.String.replace / replaceAll
 
 ###### `java.lang.String.replace` 문법
 ```java
@@ -97,7 +104,7 @@ string.replaceAll(String regex, String replacement)
 					// 정규식 또는 기존문자
 ```
 
-###### `replaceAll` vs `replace`
+###### `replace` vs `replaceAll`
 ```java
 String str = "94-04-25";
 String result1 = str.replace("-", "");
@@ -116,6 +123,9 @@ System.out.println(exResult2); // 결과 : ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 **설명**
 * replace는 **.(점)을 문자로 인식**하여 점 세개를 ^^모양으로 치환
 * replaceAll은 **.(점)을 정규식으로 인식**하여 모든 문자를 ^^모양으로 치환
+
+<br>
+<hr>
 
 ## Array.prototype.splice
 
