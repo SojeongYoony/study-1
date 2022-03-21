@@ -127,9 +127,10 @@ System.out.println(exResult2); // 결과 : ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 <br>
 <hr>
 
+## Array.prototype.join
+
 ## Array.prototype.splice
 
-## Array.prototype.join
 ## Array.prototype.push
 ## Array.prototype.pop
 ## Array.prototype.unshift
