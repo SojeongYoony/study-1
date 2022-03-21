@@ -9,6 +9,7 @@
 .indexOf(찾고자 하는 값);
 ```
 
+
 ###### [연습](https://github.com/SojeongYoony/study-1/blob/main/WebContent/practice_prototype/prototype.indexOf.jsp)
 ```javascript
 /* Array.prototype.indexOf */
