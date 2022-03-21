@@ -4,7 +4,7 @@
 * indexOf()와 lastIndexOf()는 String에서 특정 문자열의 인덱스를 찾는데 사용하는 메소드
 
 ###### 문법 - `indexOf`  /  `lastIndexOf`
-```java
+```Java
 indexOf(String);         // 특정 문자열 찾을 때 사용
 indexOf(String, index);    // 처음 글자를 건너띄고 특정 문자열을 찾고 싶을 때 사용
 
@@ -13,7 +13,7 @@ lastIndexOf(String, index) // indexOf(String, int)와 동일하나 뒤에서부�
 ```
 
 ###### 예제 
-```java
+```Java
 String sentence = "HelloWorld_MyWorld";
 		
 // indexOf(String)
