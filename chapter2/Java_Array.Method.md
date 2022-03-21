@@ -32,15 +32,14 @@ System.out.println(sentence.lastIndexOf("World", 10)); // 5반환
 <summary>Project에서 사용했던 예시</summary>
 <div>
 ```java
-
-// 서버에서 받아온 파일 저장
+// 서버에서 온 파일 저장
 MultipartFile file = multipartRequest.getFile("file");
 // DB에 저장된 profile info 가져오기
 Profile profile = new Profile();
 ProfileRepository profileRepository = sqlSession.getMapper(ProfileRepository.class);
 Profile originProfile = profileRepository.selectProfile(id);
-	if (file == null && originProfile.getpSaved() == null) { // 첨부된 파일과 DB에 저장된 정보 모두 없을 경우 null값 전달.
-		profile.setpPath(pPath);
+if (file == null && originProfile.getpSaved() == null) { // 첨부된 파일과 DB에 저장된 정보 모두 없을 경우 null값 전달.
+profile.setpPath(pPath);
 		profile.setpOrigin("");
 		profile.setpSaved("");
 		profile.setId(id);
@@ -56,13 +55,12 @@ Profile originProfile = profileRepository.selectProfile(id);
 		String pSaved = uuid + extName;
 		File uploadFile = new File(realPath, pSaved);
 		file.transferTo(uploadFile);
-	
 profile.setpOrigin(pOrigin);
 profile.setpSaved(pSaved);
 profile.setpPath(pPath);
 profile.setId(id);
 } // End if
-
+```
 
 </div>
 
