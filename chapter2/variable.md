@@ -56,16 +56,20 @@
 ##### 변수의 3단계
 **javascript에서의 변수는 선언, 초기화, 할당의 세 단계에 걸쳐 생성된다.**
 <details>
-<summary>선언 단계(Declaration phase</summary>
+<summary>선언 단계(Declaration phase)</summary>
 <div markdown="1">       
 * 변수를 실행 컨텍스트의 변수 객체에 등록하는 단계를 의미
 * 이 변수 객체는 스코프가 참조하는 대상이 된다.
 </div>
+</details>
+<details>
 <summary>초기화 단계(Initialization phase)</summary>
 <div markdown="1">       
 * 실행 컨텍스트에 존재 하는 변수 객체에 선언 단계의 변수를 위한 메모리를 만드는 단계
 * 이 단계에서 할당된 메모리에는 undefined로 초기화 된다.
 </div>
+</details>
+<details>
 <summary>할당 단계(Assignment phase)</summary>
 <div markdown="1">       
 * 사용자가 undefined로 초기화된 메모리의 다른 값을 할당하는 단계
