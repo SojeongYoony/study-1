@@ -28,10 +28,16 @@ System.out.println(sentence.lastIndexOf("World"));     // 13반환 (뒤에 있�
 System.out.println(sentence.lastIndexOf("World", 10)); // 5반환
 ```
 
+
+
 <details>
+
 <summary>Project에서 사용했던 예시</summary>
+
 <div>
-```java
+
+```javascript
+
 // 서버에서 온 파일 저장
 MultipartFile file = multipartRequest.getFile("file");
 // DB에 저장된 profile info 가져오기
