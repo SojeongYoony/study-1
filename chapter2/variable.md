@@ -43,8 +43,42 @@
 
  [참고](https://7942yongdae.tistory.com/22)
 
-			
- 
+<br>
+<hr>
+<br>
+
+## `javascript` : `var` vs `let` vs `const`
+-- life cycle[선언, 초기화, 할당]과 TDZ <br>
+#### TDZ(Temporal Dead Zone) 
+* 일시적인 사각지대
+	- 스코프의 시작 지점부터 초기화 시작 지점까지의 구간
+
+##### 변수의 3단계
+**javascript에서의 변수는 선언, 초기화, 할당의 세 단계에 걸쳐 생성된다.**
+<details>
+<summary>선언 단계(Declaration phase</summary>
+<div markdown="1">       
+* 변수를 실행 컨텍스트의 변수 객체에 등록하는 단계를 의미
+* 이 변수 객체는 스코프가 참조하는 대상이 된다.
+</div>
+<summary>초기화 단계(Initialization phase)</summary>
+<div markdown="1">       
+* 실행 컨텍스트에 존재 하는 변수 객체에 선언 단계의 변수를 위한 메모리를 만드는 단계
+* 이 단계에서 할당된 메모리에는 undefined로 초기화 된다.
+</div>
+<summary>할당 단계(Assignment phase)</summary>
+<div markdown="1">       
+* 사용자가 undefined로 초기화된 메모리의 다른 값을 할당하는 단계
+</div>
+</details>
+
+
+
+
+<br>
+<hr>
+<br>
+
 ## 스코프(Scope) - 유효범위
 * 변수와 매개변수의 생존 기간을 제어 : 변수를 사용할 수 있는 범위
 * scope는 이름이 충돌하는 문제를 줄여주고, 자동으로 메모리를 관리함
