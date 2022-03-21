@@ -1,9 +1,9 @@
 # `JAVA`  java.lang.String
 
-## Array.prototype.indexOf
+## java.lang.String.indexOf(String str)
 * indexOf()와 lastIndexOf()는 String에서 특정 문자열의 인덱스를 찾는데 사용하는 메소드
 
-###### 문법 - `indexOf`  /  `lastIndexOf`
+###### 문법 ## `indexOf`  /  `lastIndexOf`
 ```Java
 indexOf(String);         // 특정 문자열 찾을 때 사용
 indexOf(String, index);    // 처음 글자를 건너띄고 특정 문자열을 찾고 싶을 때 사용
@@ -51,7 +51,7 @@ System.out.println(sentence.lastIndexOf("World", 10)); // 5반환
 	} else if (file != null && file.isEmpty() == false) { // 첨부된 파일이 있을경우 받아온 파일을 저장한다.
 		String pOrigin = file.getOriginalFilename();
 		String extName = pOrigin.substring(pOrigin.lastIndexOf("."));
-		String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+		String uuid = UUID.randomUUID().toString().replaceAll("##", "");
 		String pSaved = uuid + extName;
 		File uploadFile = new File(realPath, pSaved);
 		file.transferTo(uploadFile);
@@ -67,21 +67,36 @@ System.out.println(sentence.lastIndexOf("World", 10)); // 5반환
 
 </details>
 
-## Array.prototype.slice
+## java.lang.String.substring
+###### 문법
+```java
+String.substring(int beginIndex, int endIndex)
+```
+
+###### 예제
+```java
+String sentence = "HelloWorld_MyWorld";
+
+String sbSentence = sentence.substring(0, 5);
+System.out.println(sbSentence); // Hello
+System.out.println(sentence);   // HelloWorld_MyWorld
+```
+
 ## Array.prototype.splice
-- Array.prototype.join
-- Array.prototype.push
-- Array.prototype.pop
-- Array.prototype.unshift
-- Array.prototype.shift
-- Array.prototype.fill
+
+## Array.prototype.join
+## Array.prototype.push
+## Array.prototype.pop
+## Array.prototype.unshift
+## Array.prototype.shift
+## Array.prototype.fill
 
 <br>
 
-- Array.prototype.forEach
-- Array.prototype.find
-- Array.prototype.filter
-- Array.prototype.map
-- Array.prototype.some
-- Array.prototype.every
-- Array.prototype.reduce
+## Array.prototype.forEach
+## Array.prototype.find
+## Array.prototype.filter
+## Array.prototype.map
+## Array.prototype.some
+## Array.prototype.every
+## Array.prototype.reduce

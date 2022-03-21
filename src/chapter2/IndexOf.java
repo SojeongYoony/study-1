@@ -16,8 +16,7 @@ public class IndexOf {
 		System.out.println(sentence.lastIndexOf("World"));     // 13반환 (뒤에 있는 World의 첫번째 인덱스 값)
 		// lastIndeoxOf(String,int)
 		System.out.println(sentence.lastIndexOf("World", 10)); // 5반환
-		
-		
+
 	}
 
 }
