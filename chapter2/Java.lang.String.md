@@ -114,6 +114,8 @@ System.out.println(exResult1); // 결과 : 안녕하세요^^ 반가워요^^ 또 
 System.out.println(exResult2); // 결과 : ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ```
 **설명**
+* replace는 <u> .(점)을 문자로 인식</u>하여 점 세개를 ^^모양으로 치환
+* replaceAll은 <u> .(점)을 정규식으로 인식</u>하여 모든 문자를 ^^모양으로 치환
 
 ## Array.prototype.splice
 
