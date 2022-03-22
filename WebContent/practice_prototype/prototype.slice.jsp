@@ -123,6 +123,8 @@
 	console.log(copiedFruitList);
 
 
+	
+	// 객체 생성과 동시에 fruitList 배열에 넣기	
 	let fruitList = [];
 	function Fruit (name, price, num) {
 		this.name = name;
