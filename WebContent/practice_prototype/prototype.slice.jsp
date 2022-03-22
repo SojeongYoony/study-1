@@ -122,15 +122,23 @@
 	console.log(fruitList);
 	console.log(copiedFruitList);
 
-	
-	function fruitBucket(objFruit, objList) {
-		objList.push(objFruit);
-		return objList;
+
+	let fruitList = [];
+	function Fruit (name, price, num) {
+		this.name = name;
+		this.price = price;
+		this.num = num;
 	}
 	
-	fruitBucket(new Fruit('orange', 5000, 1), fruitList);	
-	fruitBucket(new Fruit('grape', 6000, 2), fruitList);	
-	fruitBucket(new Fruit('pineapple', 7000, 3), fruitList);	
+	
+	function fruitBucket(objFruit) {
+		fruitList.push(objFruit); // fruitList에 만들어진 new 객체를 요소로 추가하고
+		return objFruit;  		  // 반환은 객체로 한다.
+	}
+	
+	fruitBucket(new Fruit('orange', 5000, 1));	
+	fruitBucket(new Fruit('grape', 6000, 2));	
+	fruitBucket(new Fruit('pineapple', 7000, 3));	
 	console.log(fruitList);
 	
 	fruitList.forEach(function(fruit, i) {
@@ -139,25 +147,6 @@
 		console.log(fruit.price);
 	})
 	
-
-	
-	console.log('------------------------------------------------');
-	
-	
-	
-	let list = [];
-
-	function addList (let_fruit, let_list) {
-	  let_list.push(let_fruit); 
-	  return let_fruit;
-	}
-
-	let orange = addList(new Fruit('orange', 5000,1) , list);
-	let apple = addList(new Fruit('apple', 5000,1) , list);
-	let grape = addList(new Fruit('grape', 5000,1) , list);
-	
-	
-	console.log(list);
 	
 	</script>
 	
