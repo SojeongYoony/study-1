@@ -11,7 +11,9 @@
 <body>
 
 	<h1> Array.prototype.slice </h1>
+	
 	<script>
+	/*
 		let fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
 		let citrus = fruits.slice(1,3);
 		let threeFruits =fruits.slice(0,3);
@@ -67,6 +69,96 @@
 		// Display the color of myHonda referenced from both arrays.
 		console.log('myCar[0].color = ' + myCar[0].color)
 		console.log('newCar[0].color = ' + newCar[0].color)
+	*/
+	</script>
+	
+	<script>
+	
+	
+	const arr33 = [1, 2, 3, 5, 5];
+	const copiedarr33 = arr33.slice();
+	console.log(copiedarr33);
+	
+	copiedarr33[0] = 0;
+	copiedarr33[1] = 0;
+	copiedarr33[2] = 0;
+	copiedarr33[3] = 0;
+	
+	console.log(arr33);       // 1 2 3 5 5	
+	console.log(copiedarr33); // 0 0 0 0 5
+	
+	
+	// slice : 배열 자체는 메모리 할당이 다시 되고 배열속 객체의 property는 참조하므로 얕은 복사라고 하는 것임.
+	// String과 number type은 slice한 요소를 건드려도 원본 배열은 수정되지 않음.
+	
+	let fruitList = [];
+	function Fruit (name, price, num) {
+		this.name = name;
+		this.price = price;
+		this.num = num;
+	}
+	
+	let orange = new Fruit('orange', 5000, 1);
+	let apple = new Fruit('apple', 2500, 2);
+	let grape = new Fruit('grape', 3000, 3);
+	
+	fruitList.push(orange);
+	fruitList.push(apple);
+	fruitList.push(grape); 
+	console.log(Fruit);
+	console.log(orange);
+	console.log(apple);
+	console.log(grape);
+	
+	console.log('------------------------');
+	console.log(fruitList);
+	let copiedFruitList = fruitList.slice();
+	console.log(copiedFruitList);
+	
+	console.log('------------------------');
+	
+	copiedFruitList[0].name = 'apple';
+	copiedFruitList[2].name = 'apple'; 
+	console.log(fruitList);
+	console.log(copiedFruitList);
+
+	
+	function fruitBucket(objFruit, objList) {
+		objList.push(objFruit);
+		return objList;
+	}
+	
+	fruitBucket(new Fruit('orange', 5000, 1), fruitList);	
+	fruitBucket(new Fruit('grape', 6000, 2), fruitList);	
+	fruitBucket(new Fruit('pineapple', 7000, 3), fruitList);	
+	console.log(fruitList);
+	
+	fruitList.forEach(function(fruit, i) {
+		console.log(fruit);
+		console.log(fruit.name);
+		console.log(fruit.price);
+	})
+	
+
+	
+	console.log('------------------------------------------------');
+	
+	
+	
+	let list = [];
+
+	function addList (let_fruit, let_list) {
+	  let_list.push(let_fruit); 
+	  return let_fruit;
+	}
+
+	let orange = addList(new Fruit('orange', 5000,1) , list);
+	let apple = addList(new Fruit('apple', 5000,1) , list);
+	let grape = addList(new Fruit('grape', 5000,1) , list);
+	
+	
+	console.log(list);
+	
 	</script>
 	
 
