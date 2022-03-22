@@ -42,6 +42,41 @@ function User(userNo, lastName, firstName, birthday)
 
 </script>
 
+
+
+
+
+
+
+<script>
+
+
+function FruitBucket() {
+	this.bucket = [];
+	this.addFruit = function (fruit) {
+	this.bucket.push(fruit);
+	    };
+	this.checkBucket = function () {
+	    console.table(this.bucket);
+	};
+	}
+
+	function Fruit(name, price, num) {
+	    this.name = name;
+	    this.price = price;
+	    this.num = num;
+	}
+
+	const fruitBucket = new FruitBucket();
+	fruitBucket.addFruit(new Fruit("orange", 5000, 1));
+	fruitBucket.addFruit(new Fruit("grape", 6000, 2));
+	fruitBucket.addFruit(new Fruit("pineapple", 7000, 3));
+
+	fruitBucket.checkBucket();
+
+</script>
+
+
 </head>
 <body>
 
