@@ -38,7 +38,6 @@ console.log(apple.price);	// 5000
 console.log(apple.category);// fruit
 
 
-function User(userNo, lastName, firstName, birthday)
 
 </script>
 
@@ -53,7 +52,8 @@ function User(userNo, lastName, firstName, birthday)
 
 function FruitBucket() {
 	this.bucket = [];
-	this.addFruit = function (fruit) {
+	this.addFruit = function (name, price, num) {
+		const fruit = new Fruit(name, price, num);
 	this.bucket.push(fruit);
 	    };
 	this.checkBucket = function () {
@@ -68,9 +68,9 @@ function FruitBucket() {
 	}
 
 	const fruitBucket = new FruitBucket();
-	fruitBucket.addFruit(new Fruit("orange", 5000, 1));
-	fruitBucket.addFruit(new Fruit("grape", 6000, 2));
-	fruitBucket.addFruit(new Fruit("pineapple", 7000, 3));
+	fruitBucket.addFruit("orange", 5000, 1);
+	fruitBucket.addFruit("grape", 6000, 2);
+	fruitBucket.addFruit("pineapple", 7000, 3);
 
 	fruitBucket.checkBucket();
 
