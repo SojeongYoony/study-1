@@ -104,7 +104,10 @@ console.log(name); // 윤소정
 * 변수 선언문 이전에 변수를 참조하면 언제나 undefined를 반환한다. <br>
 </details>
 
-var의 문제점을 해결하기 위해 등장! `let`과 `const`
+var의 문제점을 해결하기 위해 등장 ===> `let`과 `const`
+
+<br><br>
+
 
 `let` 
 * 선언 -> 초기화 -> 할당
@@ -126,6 +129,8 @@ console.log(name); // 윤소정
 　　<b>초기화 단계가 실행되지 않았을 때 변수에 접근하려고 하면 참조 에러</b>가 뜬다 <br>
 　　->  let 키워드로 선언한 변수는 TDZ구간에 존재한다. <br>
 </details>
+
+<br><br>
 
 `const` 
 * 선언 + 초기화 + 할당
