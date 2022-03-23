@@ -85,7 +85,8 @@
 
 #### `var` / `let` / `const` 동작방식
 
-`var` : 선언단계 + 초기화 단계 -> 할당단계
+`var` 
+* 선언단계 + 초기화 단계 -> 할당단계
 
 ###### 예시
 ```javascript
@@ -95,20 +96,62 @@ name = "윤소정";
 console.log(name); // 윤소정
 ```
 
-
-
-
 <details>
 <summary>var의 문제점</summary>
 * 변수의 중복 선언이 가능하여, 예기치 못한 값을 반환할 수 있다. <br>
 * 함수 레벨 스코프로 인해 함수 외부에서 선언한 변수는 모두 <b>전역변수</b>로 된다. <br>
-<nbsp><nbsp><nbsp><nbsp>- 함수 내부에서 선언하면 스코프가 함수이지만, 함수 외부에서 선언하면 전역 <br>
+　　- 함수 내부에서 선언하면 스코프가 함수이지만, 함수 외부에서 선언하면 전역 <br>
 * 변수 선언문 이전에 변수를 참조하면 언제나 undefined를 반환한다. <br>
 </details>
 
+var의 문제점을 해결하기 위해 등장! `let`과 `const`
 
+`let` 
+* 선언 -> 초기화 -> 할당
+* 선언과 초기화 사이, 일시적인 사각지대(TDZ) 존재
 
+###### 예시
+```javascript
+console.log(name); // ReferenceError : name is not defined
+let name;
+name = "윤소정";
+console.log(name); // 윤소정
+```
 
+<details>
+<summary>let</summary>
+* 중복 선언이 불가하지만, 재할당은 가능 <br>
+* 선언 단계와 초기화 단계가 분리되어 진행 <br>
+　　-> 런타임 이전에 JS 엔진에 의해 선언 단계가 먼저 실행되지만, <br>
+　　<b>초기화 단계가 실행되지 않았을 때 변수에 접근하려고 하면 참조 에러</b>가 뜬다 <br>
+　　->  let 키워드로 선언한 변수는 TDZ구간에 존재한다. <br>
+</details>
+
+`const` 
+* 선언 + 초기화 + 할당
+* `var`와 `let`은 선언만 해두고 나중에 사용하는 것이 가능하지만 <br>
+	`const`는 한번에 할당까지 해야 사용 가능
+
+###### 예시
+```javascript
+const gender;
+gender = "male";  
+console.log(gender); // Missing initializer in const declaration
+```
+
+<details>
+<summary>const</summary>
+* <b>반드시 선언과 초기화를 동시에 진행</b><br>
+　　-> 런타임 이전에는 실행될 수 없다. <br>
+* 재선언/재할당 불가능<br>
+* 재할당을 금지할 뿐, '불변'을 의미하지는 않음 <br>
+　　->  원시 값은 불가능하지만, 객체는 가능<br>
+</details>
+
+###### TIP
+* 기본적으로 변수의 스코프는 최대한 좁게 만드는 것을 권장.
+* var보다는 let과 const 키워드를 사용할 것
+* 변경하지 않을 값(상수)라면 let 보다는 const 키워드를 사용하는 것이 안전
 
 
 
