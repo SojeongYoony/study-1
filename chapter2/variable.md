@@ -52,6 +52,8 @@
 #### TDZ(Temporal Dead Zone) 
 * 일시적인 사각지대
 	- 스코프의 시작 지점부터 초기화 시작 지점까지의 구간
+	- 변수의 선언과 변수의 초기화 사이의 변수에 접근할 수 없는 지점
+		- 즉, 초기화 되지 않은 변수가 있는 곳
 
 #### 변수의 3단계
 * javascript에서의 변수는 **선언, 초기화, 할당의 세 단계에 걸쳐 생성**된다.
@@ -79,6 +81,27 @@
 |var|let|
 |:-:|:-:|
 |![Var](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcpN7ly%2FbtqFMImMjbi%2FXax5yU47pHIffGGf6BYetk%2Fimg.jpg)|![let](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbrfyzo%2FbtqFMHahg20%2FO4al3vnYiNideb03m6xB60%2Fimg.jpg)|
+
+
+#### `var` / `let` / `const` 동작방식
+
+`var` : 선언단계 + 초기화 단계 -> 할당단계
+
+###### 예시
+```javascript
+console.log(name); // 윤소정 : hositing에 의해 선언과 초기화가 이뤄지지 않았음에도 값 출력
+var name;
+name = "윤소정";
+console.log(name); // 윤소정
+```
+
+<details>
+<summary>var의 문제점</summary>
+* 변수의 중복 선언이 가능하여, 예기치 못한 값을 반환할 수 있다.
+* 함수 레벨 스코프로 인해 함수 외부에서 선언한 변수는 모두 **전역변수**로 된다.
+* 변수 선언문 이전에 변수를 참조하면 언제나 undefined를 반환한다.
+</details>
+
 
 
 <br>
