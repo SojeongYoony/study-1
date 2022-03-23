@@ -25,7 +25,14 @@ console.log( new Food('cheese', 5).name );
 
 
 ## Function.prototype.apply
+* `apply()` 메서드는 주어진 `this` 값과 배열 (또는 유사 배열 객체)로 제공되는 `arguments`로 함수를 호출
 
+###### `arguments` 객체
+* 함수에 전달된 인수에 해당하는 Array 형태의 객체
+
+###### 참고
+call()과 유사하나 call()은 함수에 전달 될 인수 리스트를 받고, <br>
+apply()는 인수들의 단일 배열을 받는다. 
 
 ## Function.prototype.bind
 
