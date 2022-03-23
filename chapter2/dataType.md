@@ -52,7 +52,7 @@
   ### Data Type `JavaScript`
   #### 원시타입 / 객체타입
   #### 원시타입 (primitive data type) 
-  : 원시 타입의 값은 변결 불가능한 값(immutable value)이며 pass-by-value(값에 의한 전달)이다.
+  : 원시 타입의 값은 변경 불가능한 값(immutable value)이며 pass-by-value(값에 의한 전달)이다.
  
   
   #### 1. Number(숫자형) : 숫자를 이용하여 덧셈/뺄셈/곱셈/나눗셈 등의 연산을 할 수 있다.
