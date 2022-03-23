@@ -34,8 +34,13 @@ console.log( new Food('cheese', 5).name );
 call()과 유사하나 call()은 함수에 전달 될 인수 리스트를 받고, <br>
 apply()는 인수들의 단일 배열을 받는다. 
 
-## Function.prototype.bind
+<br>
+<hr>
+<br>
 
+## Function.prototype.bind
+* 새로운 함수를 생성한다.
+* 받게되는 첫 인자의 value로는 this 키워드를 설정하고, 이어지는 인자들은 바인드 된 함수의 인수에 제공된다.
 
 
 <br>
