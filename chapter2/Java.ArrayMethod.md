@@ -12,6 +12,41 @@
 ## Object.clone()
 * Array.clone() // 깊은복사
 
+
+
+
+## java.util.Arrays.copyOf
+###### 문법
+```java
+	Arrays.copyOf(복사할 배열, 배열의 길이);
+```
+
+###### 예제
+``` java
+		int[] arr1 = {1, 2, 3, 4, 5, 6, 7};
+		int[] copied1 = Arrays.copyOf(arr1, 10); // 복사할 원본 배열, 만약 원본 배열의 크기보다 클 경우 나머지는 int의 기본 값인 0 으로 할당된다.
+		System.out.println(arr1);
+		System.out.println(copied1);
+		for (int i = 0; i <= copied1.length; i++ ) {
+			System.out.println(copied1[i]);
+		}
+```
+
+##  java.util.Arrays.copyOfRange
+###### 문법
+```java
+	copyOfRange(복사의 대상 배열, 복사할 시작 idx, 마지막으로 복사될 배열 요소의 다음 idx)
+```
+
+###### 예제
+```java
+		int[] copied2 = Arrays.copyOfRange(arr1, 5, copied2.length);
+		for (int i = 0; i <= copied2.length -1; i++ ) {
+			System.out.print(copied2[i]); 			// 6, 7
+		}
+```
+
+
 ## Array.prototype.splice
 ## Array.prototype.join
 ## Array.prototype.push
