@@ -80,13 +80,61 @@ greet.call(obj);  // cats typically sleep between 12 and 16 hours
 call()과 유사하나 call()은 함수에 전달 될 인수 리스트를 받고, <br>
 apply()는 인수들의 단일 배열을 받는다. 
 
+
+###### 배열에 배열을 붙이기 위해 `apply` 사용하기
+```javascript
+
+// push.apply로 넣을 경우 요소로 추가 됨.
+const arr1 = ['a', 'b', 'c', 'd', 'e'];
+const arr2 = ['f', 'g', 'h', 'i', 'j'];
+arr1.push.apply(arr1, arr2);
+console.log('arr1', arr1);	// ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+console.log('arr2', arr2);	// ['f', 'g', 'h', 'i', 'j']
+
+// push로 배열을 넣을 경우 인덱스에 배열로 추가 됨.
+arr1.push(arr2);
+console.log(arr1);
+['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', Array(5)]
+0: "a"
+1: "b"
+2: "c"
+3: "d"
+4: "e"
+5: "f"
+6: "g"
+7: "h"
+8: "i"
+9: "j"
+10: (5) ['f', 'g', 'h', 'i', 'j']
+
+```
+
+
 <br>
 <hr>
 <br>
 
-## Function.prototype.bind
+## Function.prototype.bind  묶다
 * 새로운 함수를 생성한다.
 * 받게되는 첫 인자의 value로는 this 키워드를 설정하고, 이어지는 인자들은 바인드 된 함수의 인수에 제공된다.
 
+```javascript
+
+const module = {
+  x: 42,
+  getX: function() {
+    return this.x;
+  }
+};
+
+const unboundGetX = module.getX;							unboundGetX = function(){return this.x;}  
+console.log(unboundGetX()); // The function gets invoked at the global scope
+// expected output: undefined
+
+const boundGetX = unboundGetX.bind(module);				
+console.log(boundGetX());
+// expected output: 42
+
+```
 
 <br>
