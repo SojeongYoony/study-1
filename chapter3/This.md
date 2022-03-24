@@ -1,8 +1,12 @@
 ## `javascript` this
-- this란?
-* JavaScript에서 함수의 `this` 키워드는 다른 언어와 조금 다르게 동작 함
-* 
+- 객체 자신을 의미하는 키워드이다.
+- 객체 내부에서만 사용된다.
+- this.속성 또는 this['속성'] 중 한 가지 방법을 사용한다.
 
+## `java` this
+- 현재 객체를 의미함
+- this. : 현재 클래스의 field / method를 의미함.
+- 현재 실행되고 있는 컨텍스트에 속한 객체에 대한 레퍼런스
 
 ## Function.prototype.call`javascript`
 * `call()` 메소드는 주어진 `this`값 및 각각 전달된 인수와 함께 함수를 호출 <br>
