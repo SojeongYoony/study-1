@@ -41,16 +41,34 @@ var animals = [
 
 for (var i = 0; i < animals.length; i++) {
   (function(i) {
-    this.print = function() { 	 // 각 객체에  print속성의 함수를 추가 // this는 animals 배열의 객체요소들.
+    this.print = function() { 	 // 각 객체에  print속성의 익명함수를 추가   **this는 animals 배열의 객체요소들.
       console.log('#' + i + ' ' + this.species
                   + ': ' + this.name);
-    }								 // for문이 돌때마다 함수를 각 객체 안에 정의함
-    this.print(); 			    // print함수를 호출하는 익명함수 전달받는 매개변수는 i
-  }).call(animals[i], i);	    // 이때 call이 print함수를 호출하는 익명함수를 호출
+    }							
+    this.print(); 			    // print에 저장된 함수 호출
+  }).call(animals[i], i);	    // function(i) 익명함수 호출
   									// call은 function(i){this.print();}를 호출
 }
  
 ```
+
+###### 함수 호출 및 `this`를 위한 문맥 지정에 call 사용
+```javascript
+
+function greet() {
+  var reply = [this.animal, 'typically sleep between', this.sleepDuration].join(' ');
+  console.log(reply);
+}
+
+var obj = {
+  animal: 'cats', sleepDuration: '12 and 16 hours'
+};
+
+greet.call(obj);  // cats typically sleep between 12 and 16 hours
+
+```
+===> `greet`을 호출하면 `this` 값은 객체 `obj`에 바인딩 된다.
+
 
 ## Function.prototype.apply
 * `apply()` 메서드는 주어진 `this` 값과 배열 (또는 유사 배열 객체)로 제공되는 `arguments`로 함수를 호출
