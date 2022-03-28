@@ -120,6 +120,11 @@ public interface InterfaceName {...}
 
 <br>
 
+
+[정적 메서드(Static Method)](######정적-메서드(static-method))
+
+
+
 ###### 상수필드(Constant Field)
 ```java
 public interface User {
