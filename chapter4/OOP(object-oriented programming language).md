@@ -114,13 +114,13 @@ public interface InterfaceName {...}
 		<li>상수 필드(Constant Field)</li>
 		<li>추상 메서드(Abstract Method)</li>
 		<li>디폴트 메서드(Default Method)</li>
-		<li>정적 메서드(Static Method)</li>
+		<li>[정적 메서드(Static Method)](######정적-메서드(static-method))</li>
 	</ol>
 </details>
 
 <br>
 
-###### #상수필드(Constant Field)
+###### 상수필드(Constant Field)
 ```java
 public interface User {
 
