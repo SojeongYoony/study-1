@@ -110,6 +110,8 @@ public interface InterfaceName {...}
 	
 <details>
 	<summary><b>구성요소</b></summary>
+	
+<div markdown="1">
 [상수 필드(Constant Field)](#상수필드(constant-field))
 		
 <br>
@@ -123,6 +125,7 @@ public interface InterfaceName {...}
 <br>
 
 정적 메서드(Static Method)
+</div>
 
 </details>
 
