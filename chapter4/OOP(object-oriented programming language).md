@@ -85,6 +85,9 @@ ex) 붕어빵을 만든다고 가정하면, 클래스는 붕어빵을 만들기 
 
 📌interface를 이용하여, 개발 코드를 직접 수정하지 않고도, 사용하고 있는 객체만 변경할 수 있도록 하기 위함.
 
+<br>
+<br>
+
 #### 2. 인터페이스(interface) 선언
 ###### 인터페이스(interface)
 ```java
@@ -108,7 +111,7 @@ public interface InterfaceName {...}
 <details>
 	<summary><b>구성요소</b></summary>
 	<ol>
-		<li>상수 필드(Constant Field)</li>
+		<li>[상수 필드(Constant Field)](#상수필드(constant-field))</li>
 		<li>추상 메서드(Abstract Method)</li>
 		<li>디폴트 메서드(Default Method)</li>
 		<li>정적 메서드(Static Method)</li>
@@ -199,6 +202,8 @@ public interface User {
 * [public]은 명시적으로 사용하지 않아도, Compile Time에 자동으로 선언된다.
 * 인터페이스의 정적 메서드도 클래스의 정적 메서드와 똑같은 방식으로 사용 가능하다.
 
+<br>
+<br>
 
 #### 3. 인터페이스(interface) 구현
 
