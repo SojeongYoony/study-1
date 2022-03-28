@@ -109,9 +109,9 @@ public interface InterfaceName {...}
 	* java7까지는 실행 블록이 없는 추상 메서드로만 선언이 가능했으나, java8부터는 default method와 static method도 선언 가능.
 	
 <b>구성요소</b><br>
-[상수 필드(Constant Field)](#상수필드(constant-field))
-[추상 메서드(Abstract Method)](######추상-메서드(Abstract-Method))
-[디폴트 메서드(Default Method)](###### 디폴트-메서드(default-method))
+[상수 필드(Constant Field)](#상수필드(constant-field)) <br>
+[추상 메서드(Abstract Method)](######추상-메서드(Abstract-Method)) <br>
+[디폴트 메서드(Default Method)](###### 디폴트-메서드(default-method)) <br>
 [정적 메서드(Static Method)](######정적-메서드(static-method))
 
 <br>
