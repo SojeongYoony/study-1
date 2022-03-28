@@ -115,6 +115,8 @@ public interface InterfaceName {...}
 	</ol>
 </details>
 
+<br>
+
 ###### 상수필드(Constant Field)
 ```java
 public interface User {
@@ -134,17 +136,18 @@ public interface User {
 * [public static final]는 명시적으로 사용하지 않아도, Compile Time에 자동으로 선언되어 상수로 만든다.
 * 네이밍은 모두 대문자로 구성되고 구분자는 `_`(언더바)로 표현된다. (Java Convention)
 
+<br>
+
 ###### 추상 메서드(Abstract Method)
 ```java
+public interface User {
+	//추상 메서드(Abstract Method)
+	[public abstract] 리턴타입 메서드이름(매개변수, ...);
 	
-	public interface User {
-		//추상 메서드(Abstract Method)
-		[public abstract] 리턴타입 메서드이름(매개변수, ...);
-		
-		// 예시
-		String sendMoney(Money money); 					 // 와
-		public abstract String sendMoney(Money money); // 는 같다
-	}
+	// 예시
+	String sendMoney(Money money); 					 // 와
+	public abstract String sendMoney(Money money); // 는 같다
+}
 ```
 
 
@@ -153,8 +156,16 @@ public interface User {
 * 추상 메서드는 리턴 타입/메서드 이름/매개변수가 기술되는 클래스 설계 메서드 이다.
 * [public abstract]은 명시적으로 선언하지 않아도, Compile Time에 자동으로 선언 된다.
 
-###### 디폴트 메서드(Default Method)
+<br>
 
+###### 디폴트 메서드(Default Method)
+```java
+public interface User {
+	// 디폴트 메서드(Default Method)
+	[public] default 리턴타입 메서드이름(매개변수, ...) {...}
+		
+}
+```
 
 
 ## 객체지향 프로그래밍이란?
