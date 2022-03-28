@@ -76,7 +76,7 @@ ex) 붕어빵을 만든다고 가정하면, 클래스는 붕어빵을 만들기 
 * 인터페이스는 객체를 어떻게 구성해야 하는지 정리한 **설계도**
 
 
-<p align="center"><img width="300px" src="https://blog.kakaocdn.net/dn/brgAeM/btqN2VpqaBi/kanTFm2nCAyOjYIQL95Bik/img.png"></p>
+<p align="center"><img width="500px" src="https://blog.kakaocdn.net/dn/brgAeM/btqN2VpqaBi/kanTFm2nCAyOjYIQL95Bik/img.png"></p>
 
 ## 객체지향 프로그래밍이란?
 ## 객체지향의 장/단점?
