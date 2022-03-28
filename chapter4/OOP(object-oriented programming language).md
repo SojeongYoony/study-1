@@ -113,17 +113,8 @@ public interface InterfaceName {...}
 	
 <div markdown="1">
 [상수 필드(Constant Field)](#상수필드(constant-field))
-		
-<br>
-
 추상 메서드(Abstract Method)
-
-<br>
-
 디폴트 메서드(Default Method)
-
-<br>
-
 정적 메서드(Static Method)
 </div>
 
