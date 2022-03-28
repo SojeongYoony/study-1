@@ -108,22 +108,13 @@ public interface InterfaceName {...}
 	interface는 상수 필드, 추상메서드, 디폴트 메서드, 정적 메서드를 구성 멤버로 가진다.
 	* java7까지는 실행 블록이 없는 추상 메서드로만 선언이 가능했으나, java8부터는 default method와 static method도 선언 가능.
 	
-<details>
-	<summary><b>구성요소</b></summary>
-	<ol>
-		<li>상수 필드(Constant Field)</li>
-		<li>추상 메서드(Abstract Method)</li>
-		<li>디폴트 메서드(Default Method)</li>
-		<li>[정적 메서드(Static Method)](######정적-메서드(static-method))</li>
-	</ol>
-</details>
+<b>구성요소</b><br>
+[상수 필드(Constant Field)](#상수필드(constant-field))
+[추상 메서드(Abstract Method)](######추상-메서드(Abstract-Method))
+[디폴트 메서드(Default Method)](###### 디폴트-메서드(default-method))
+[정적 메서드(Static Method)](######정적-메서드(static-method))
 
 <br>
-
-
-[정적 메서드(Static Method)](#정적-메서드(static-method))
-
-
 
 ###### 상수필드(Constant Field)
 ```java
