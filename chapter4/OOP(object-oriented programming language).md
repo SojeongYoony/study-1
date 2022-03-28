@@ -208,7 +208,7 @@ public interface User {
 * 인터페이스를 구현한 객체를 구현 객체(구현체)라고 함.
 * 구현 객체를 생성하는 클래스를 구현 클래스라고 함.
 
-###### 인터페이스 구현방식
+**인터페이스 구현방식**
 [단일 인터페이스 구현 클래스](#단일-인터페이스-구현-클래스) <br>
 [다중 인터페이스 구현 클래스](#다중-인터페이스-구현-클래스) <br>
 [익명 구현 객체](#익명-구현-객체) <br>
@@ -216,6 +216,84 @@ public interface User {
 <br><br>
 
 ###### 단일 인터페이스 구현 클래스
+```java
+// 단일 인터페이스 구현 클래스 (Implement Class)
+public class 구현클래스이름 implements 인터페이스이름 {
+	// 인터페이스의 추상 메서드를 구현한 실체 메서드를 선언하는 부분
+}
+
+```
+
+`ex) interface`
+
+```java
+public interface User {
+	
+	public static final String FIRST_NAME = "Yoon";
+	
+	public abstract String sendMoney(Money money);
+	
+	public default void setStatus(Status status) {
+		if (status == Status.ACTIVE) {
+			System.out.println("사용자가 활성화 되었습니다.");
+			return;
+		}
+		System.out.println("사용자가 비활성화 되었습니다.");
+	}
+	
+	public static void printFirstName() {
+		System.out.println("나의 이름은 " + firstName + "입니다.");
+	}
+}
+
+```
+
+`ex) interface 예시를 구현한 구현 클래스 예시`
+
+```java
+public class Recipient implement User {
+	
+	// 추상 메서드는 다음처럼 실제 메서드를 정의해야한다.
+	public String sendMoney(Money money) {
+		thirdpartyApi.send(money.getType(), money.getAmount());
+		return Status.SUCCESS.name();
+	}
+	
+	// 디폴트 메서드는 재정의가 가능하다.
+	// 재정의 하지 않으면, 인터페이스에 정의된 내용 그대로 사용된다.
+	@Override
+	public default void setStatus(Status status) {
+		if(status == Status.ACTIVE) {
+			Systme.out.println("수취인이 활성화 되었습니다.");
+			return;
+		}
+		System.out.println("수취인이 비활성화 되었습니다.");
+	}
+}
+```
+
+만약 인터페이스를 구현한다고 하고, 추상 메서드를 구현 클래스에서 실체 메서드를 모두 작성하지 않으면 <br>
+해당 구현 클래스는 추상 클래스로 선언되어야 한다.
+
+```java
+public abstract class Recipient implements User {
+
+}
+```
+
+인터페이스 변수에 구현 객체 대입 예시
+
+```java
+// User 인터페이스를 구현한 구현 클래스 Recipient
+public class Recipient implements User {...}
+
+// User 인터페이스를 구현한 구현 클래스 Sender
+public class Sender implements User {...}
+
+User user = new Recipient();
+user = new Sender();
+```
+
 
 ###### 다중 인터페이스 구현 클래스
 
