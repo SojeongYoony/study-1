@@ -107,16 +107,8 @@ public interface InterfaceName {...}
 * class는 상수 필드, 정적 필드, 인스턴스 필드, 생성자, 인스턴스 메서드, 정적 메서드를 구성 멤버로 가지는데, <br>
 	interface는 상수 필드, 추상메서드, 디폴트 메서드, 정적 메서드를 구성 멤버로 가진다.
 	* java7까지는 실행 블록이 없는 추상 메서드로만 선언이 가능했으나, java8부터는 default method와 static method도 선언 가능.
-	
-<details>
-<summary>구성요소</summary>
-<ol>
-<li>[상수 필드](#상수필드) </li>
-<li>[추상 메서드](#추상-메서드)</li>
-<li>[디폴트 메서드](#디폴트-메서드)</li>
-<li>[정적 메서드](#정적-메서드)</li>
-</ol>
-</details>
+
+
 <b>구성요소</b><br>
 [상수 필드](#상수필드) <br>
 [추상 메서드](#추상-메서드) <br>
