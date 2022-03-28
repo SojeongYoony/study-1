@@ -71,8 +71,15 @@ ex) 붕어빵을 만든다고 가정하면, 클래스는 붕어빵을 만들기 
 </details>
 
 ## 인터페이스란?
+
+#### 인터페이스(interface) 역할
+* 인터페이스는 객체를 어떻게 구성해야 하는지 정리한 **설계도**
+
+
+<p align="center"><img src="https://blog.kakaocdn.net/dn/brgAeM/btqN2VpqaBi/kanTFm2nCAyOjYIQL95Bik/img.png"></p>
+
 ## 객체지향 프로그래밍이란?
 ## 객체지향의 장/단점?
 ## 추상화란?
-## 객체지향 3요소 5원칙
+## 객체지향 3요소 5원칙 
 ## AOP란?
