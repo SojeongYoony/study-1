@@ -181,7 +181,7 @@ public interface User {
 
 <br>
 
-###### 정적 메서드(Static Method)
+###### 정적 메서드(static method)
 ```java
 public interface User {
 	// 정적 메서드(Static Method)
