@@ -136,6 +136,7 @@ public interface User {
 
 ###### 추상 메서드(Abstract Method)
 ```java
+	
 	public interface User {
 		//추상 메서드(Abstract Method)
 		[public abstract] 리턴타입 메서드이름(매개변수, ...);
@@ -144,8 +145,8 @@ public interface User {
 		String sendMoney(Money money); 					 // 와
 		public abstract String sendMoney(Money money); // 는 같다
 	}
-	
-```?
+```
+
 
 * 인터페이스 변수로 호출된 메서드는 최종적으로 구현 객체에서 실행된다. <br>
 	그래서 실체는 인터페이스에 없고, 구현 클레스에 있다.
