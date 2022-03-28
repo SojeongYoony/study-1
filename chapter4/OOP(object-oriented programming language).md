@@ -163,10 +163,44 @@ public interface User {
 public interface User {
 	// 디폴트 메서드(Default Method)
 	[public] default 리턴타입 메서드이름(매개변수, ...) {...}
-		
+	// 예시
+	public default void setStatus(Status status) {
+		if(status == Status.ACTIVE) {
+			System.out.println("사용자가 활성화 되었습니다.");
+			return;
+		} 
+		System.out.println("사용자가 비활성화 되었습니다.");
+	}
 }
 ```
+* Java8에서 추가된 인터페이스의 멤버.
+* 클래스의 인스턴스 메서드와 동일함. 즉, 인스턴스 메서드. <br>
+	다만 인터페이스에서 선언할 때, 리턴 타입 앞에 default 키워드가 붙는다.
+* [public]은 명시적으로 사용하지 않아도, Compile Time에 자동 선언 된다.
+* 디폴트 메서드는 나중에 인터페이스를 구현한 구현 클래스에 인스턴스 메서드로 추가된다.
+* 재정의(Override)를 통해서 구현 클래스에서 재정의된 인스턴스 메서드로 사용할 수 있다.
 
+<br>
+
+###### 정적 메서드(Static Method)
+```java
+public interface User {
+	// 정적 메서드(Static Method)
+	[public] static 리턴타입 메서드이름(매개변수, ...) { ... }
+	
+	// 예시
+	public static void printFirstName(){
+		System.out.println("나의 이름은 " + firstName + "입니다.");
+	}
+}
+```
+* Java8에서 추가된 인터페이스의 멤버입니다.
+* 선언 형식은 클래스 정적 메서드와 완전 동일하다.
+* [public]은 명시적으로 사용하지 않아도, Compile Time에 자동으로 선언된다.
+* 인터페이스의 정적 메서드도 클래스의 정적 메서드와 똑같은 방식으로 사용 가능하다.
+
+
+#### 3. 인터페이스(interface) 구현
 
 ## 객체지향 프로그래밍이란?
 ## 객체지향의 장/단점?
