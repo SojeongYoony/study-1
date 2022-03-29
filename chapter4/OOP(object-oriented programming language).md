@@ -361,7 +361,7 @@ User recipient = new Recipient();	// User 인터페이스 참조변수 recipient
 </ol>
 </details>
 
-`ex)`
+**ex)**
 
 ```java
 public class TestClass{
@@ -387,6 +387,51 @@ public class TestClass{
 	}
 }
 ```
+
+인터페이스의 구성요소 사용 예시
+4-1. 상수 필드(Constant Field) 사용
+4-2. 추상 메서드(Abstract Method) 사용
+4-3. 디폴트 메서드(Default Method) 사용
+4-4. 정적 메서드(Static Method) 사용
+
+```java
+public interface User {
+
+    public static final String FIRST_NAME = "Ryan";
+
+    public abstract String sendMoney(Money money);
+
+    public default void setStatus(Status status) {
+        if(status == Status.ACTIVE) {
+            System.out.println("사용자가 활성화 되었습니다.");
+            return;
+        }
+        System.out.println("사용자가 비활성화 되었습니다.");
+    }
+
+    public static void printFirstName() {
+        System.out.println("나의 이름은 " + firstName + "입니다.");
+    }
+}
+```
+
+**상수 필드(ConstantField) 사용** <br>
+
+```java
+User.FIRST_NAME
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## 객체지향 프로그래밍이란?
