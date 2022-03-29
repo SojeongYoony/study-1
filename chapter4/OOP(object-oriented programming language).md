@@ -339,6 +339,55 @@ User user = new User() {
 ###### 주의
 **익명 구현 객체를 사용한다고 해서, 클래스가 생성되지 않는 것은 아님.** <br>
 
+<br>
+<br>
+
+#### 4. 인터페이스(interface) 사용
+* 인터페이스 변수는 참조 타입이기 때문에 구현 객체가 대입될 경우 구현 객체의 번지가 저장된다.
+
+```java
+User sender = new Sender();			// User 인터페이스 참조변수 sender에 Sender 객체의 번지 저장
+User recipient = new Recipient();	// User 인터페이스 참조변수 recipient에 Recipient 객체의 번지 저장
+```
+
+<details>
+<summary>인터페이스 변수는 5개의 부분에서 구현 객체의 참조 용도로 사용될 수 있다.</summary>
+<ol>
+<li>클래스의 필드</li>
+<li>생성자의 파라미터</li>
+<li>생성자의 로컬 변수</li>
+<li>메서드의 파라미터</li>
+<li>메서드의 로컬 변수</li>
+</ol>
+</details>
+
+`ex)`
+
+```java
+public class TestClass{
+	// 1. 클래스의 필드
+	User user = new Recipient();
+	
+	// 2. 생성자의 파라미터
+	TestClass(User user) {
+		this.user = user;
+		
+		// 3. 생성자의 로컬변수
+		User recipient = new Recipient();
+	}
+	
+	// 4. 메서드의 파라미터
+	void methodA(User user){
+		...
+	}
+	
+	void methodB(){
+		// 5. 메서드의 로컬변수
+		User user = new Recipient();
+	}
+}
+```
+
 
 ## 객체지향 프로그래밍이란?
 ## 객체지향의 장/단점?
