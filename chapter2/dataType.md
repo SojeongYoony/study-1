@@ -81,6 +81,15 @@ object instanceof constructor
 	`constructor` : 판별 목표 함수
 
 
+instanceof => 한 예를 들면 자바의 오버로드를 흉내 낼 때 --> 
+				* 오버로드 : 본래 메소드는 동일한 이름 사용이 불가하나, 인자 값이 다를 경우 같은 이름을 사용하여 정의할 수 있다.
+예시) Car객체를 만드는데 하나는 default 값을 넣어주기 위한 것이고 하나는 parameter로 받은 값을 넣어 만들고 싶다. 
+그렇다면 public Car () { this.name = "carname"; } << default / public Car (String name) { this.name = name; } 이런 식으로 쓸 수 있음
+
+  인터페이스나 필터링에도 쓰임.
+  쓰임새는 굉장히 많음
+
+
  <br>
  <br>
 

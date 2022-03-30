@@ -70,7 +70,7 @@ greet.call(obj);  // cats typically sleep between 12 and 16 hours
 ===> `greet`을 호출하면 `this` 값은 객체 `obj`에 바인딩 된다.
 
 
-## Function.prototype.apply
+## Function.prototype.apply  // *apply 다시 한번 보기
 * `apply()` 메서드는 주어진 `this` 값과 배열 (또는 유사 배열 객체)로 제공되는 `arguments`로 함수를 호출
 
 ###### `arguments` 객체
@@ -114,7 +114,7 @@ console.log(arr1);
 <hr>
 <br>
 
-## Function.prototype.bind  묶다
+## Function.prototype.bind  묶다  // 인자 값을 저장하여 사용하는 형태로 쓰는 것이 바람직 하다. -- 특정 시점에서 쓸만하다.
 * 새로운 함수를 생성한다.
 * 받게되는 첫 인자의 value로는 this 키워드를 설정하고, 이어지는 인자들은 바인드 된 함수의 인수에 제공된다.
 
@@ -138,3 +138,12 @@ console.log(boundGetX());
 ```
 
 <br>
+
+
+call apply bind는 어떠한 것을 this로 하여 빌려 쓴다고 이해하면 됨.
+
+
+* arguments
+* iterable
+* length
+method는 객체 내에 있는 함수

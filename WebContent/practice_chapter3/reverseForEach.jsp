@@ -59,6 +59,14 @@ console.log('-----------------------------------------------------------');
 
 
 Array.prototype.reverseForEach2 = function (callback) {
+	
+	// if와 instanceof를 사용하여 function이거나 아니거나 등을 확인하여 예외처리를 할 수 있다
+	// ex (if instanceof call !== callback) {
+	//	
+	//	callback = function()	
+	//}
+	
+	
 	for (let i = this.length -1; i >= 0; i--) {
 		callback(this[i], i);
 	}
@@ -71,6 +79,13 @@ const array2 = array.reverseForEach2(function (ele, i){
 });
 
 console.log(array2);
+
+
+// 반환값이 true이면 반복 중단하기
+// forEach는 무조건 배열 전체를 순환 하므로, 원하는 인덱스까지만 순호나하고 싶은걸 궇ㄴ하라나는 뜻 이었음
+// 마지막으로 순환한 i값 (중단 되었을 당시의 index 값)
+
+
 
 </script>
 
