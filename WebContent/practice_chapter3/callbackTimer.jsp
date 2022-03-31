@@ -65,9 +65,9 @@ setTimeout(function (){
 */
 
 
-var second = '00';
-var minute = '00';
-var hour = '00';
+var second = 0;
+var minute = 0;
+var hour = 0;
 
 
 // inline level로 함수를 등록하지 않음
@@ -90,6 +90,9 @@ let vvvv =	setInterval(function (){
 			hour ++;
 		}
 		
+		$('#second').text(format(second));
+		$('#minute').text(format(minute));
+		$('#hour').text(format(hour));
 		
 	}, 1000) // End setInterval
 
@@ -97,17 +100,6 @@ let vvvv =	setInterval(function (){
 	console.log(vvvv);
 	
 }
-
-
-function format(num){
-	   return  `${num <10 ? '0' : ''}${num}`
-	}
-
-$('#second').text(second);
-$('#minute').text(minute);
-$('#hour').text(hour);
-
-
 
 function stopTimer(){
 	
@@ -119,6 +111,20 @@ function stopTimer(){
 	
 }
 
+
+
+
+
+function format(num){
+	   return  `${num <10 ? '0' : ''}${num}`
+}
+
+
+function displayTime(){
+}
+
+
+
 </script>
 
 
@@ -127,9 +133,9 @@ function stopTimer(){
 
 <div id="time_box">
 
-	<div id="hour" class="time"></div>
-	<div id="minute" class="time"></div>
-	<div id="second" class="time"></div>
+	<div id="hour" class="time">00:</div>
+	<div id="minute" class="time">00:</div>
+	<div id="second" class="time">00</div>
 
 </div>
 
