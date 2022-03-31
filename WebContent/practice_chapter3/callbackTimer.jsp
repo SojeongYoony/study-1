@@ -10,8 +10,17 @@
 <style>
 	#time_box {
 		width : 450px;
-		height: 200px;
+		height: 140px;
 		background-color: orange;
+		display: flex;
+	}
+	.time {
+		margin: 0 auto;
+		display: inline;
+		width: 30%;
+		font-weight: 900;
+		font-size: 100px;
+		text-align: center;
 	}
 	.btns {
 		width : 150px;
@@ -54,6 +63,48 @@ setTimeout(function (){
 */
 
 
+var second = '00';
+var minute = '00';
+var hour = '00';
+
+function startTimer(){
+	
+
+let vvvv =	setInterval(function (){
+		
+		second ++;
+		
+		if (second >= 60) {
+			second = 0;
+			minute ++;
+			
+		}
+		
+		if (minute >= 60) {
+			minute = 0;
+			hour ++;
+		}
+		
+		$('#second').text(second);
+		$('#minute').text(minute);
+		$('#hour').text(hour);
+		
+	}, 1000) // End setInterval
+
+	
+	console.log(vvvv );
+	
+}
+
+function stopTimer(){
+	
+	$('#stop_btn').on('click', function(){
+		
+		$('#start_btn').off();
+		
+	})
+	
+}
 
 </script>
 
@@ -61,9 +112,15 @@ setTimeout(function (){
 </head>
 <body>
 
-<div id="time_box"></div>
+<div id="time_box">
 
-<input type="button" id="start_btn"  class="btns" value="시작">
+	<div id="hour" class="time"></div>
+	<div id="minute" class="time"></div>
+	<div id="second" class="time"></div>
+
+</div>
+
+<input type="button" id="start_btn"  class="btns" value="시작" onclick="startTimer()">
 <input type="button" id="pause_btn" class="btns" value="일시정지">
 <input type="button" id="stop_btn" class="btns" value="종료">
 
