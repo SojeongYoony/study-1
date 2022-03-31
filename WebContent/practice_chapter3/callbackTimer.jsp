@@ -31,6 +31,8 @@
 </style>
 
 <script>
+// 
+
 
 //타이머 시작을 하면 함수 호출
 /*
@@ -67,6 +69,10 @@ var second = '00';
 var minute = '00';
 var hour = '00';
 
+
+// inline level로 함수를 등록하지 않음
+
+
 function startTimer(){
 	
 
@@ -77,7 +83,6 @@ let vvvv =	setInterval(function (){
 		if (second >= 60) {
 			second = 0;
 			minute ++;
-			
 		}
 		
 		if (minute >= 60) {
@@ -86,12 +91,10 @@ let vvvv =	setInterval(function (){
 		}
 		
 		
-		
-		
 	}, 1000) // End setInterval
 
 	
-	console.log(vvvv );
+	console.log(vvvv);
 	
 }
 
@@ -110,7 +113,7 @@ function stopTimer(){
 	
 	$('#stop_btn').on('click', function(){
 		
-		$('#start_btn').off();
+		$('#start_btn').off(); // button을 종료시키는거고 interval은 별개이기때문에 종료되지 않음 clearInterval이라는게 있음.
 		
 	})
 	
