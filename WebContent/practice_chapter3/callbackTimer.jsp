@@ -72,6 +72,11 @@ var hour = 0;
 
 // inline level로 함수를 등록하지 않음
 
+function format(num){
+//	   return  `${num <10 ? '0' : ''}${num}`
+	   return  (num < 10 ? '0' : '') + num
+}
+
 
 function startTimer(){
 	
@@ -115,10 +120,6 @@ function stopTimer(){
 
 
 
-function format(num){
-	   return  `${num <10 ? '0' : ''}${num}`
-}
-
 
 function displayTime(){
 }
@@ -133,8 +134,8 @@ function displayTime(){
 
 <div id="time_box">
 
-	<div id="hour" class="time">00:</div>
-	<div id="minute" class="time">00:</div>
+	<div id="hour" class="time">00</div>
+	<div id="minute" class="time">00</div>
 	<div id="second" class="time">00</div>
 
 </div>
