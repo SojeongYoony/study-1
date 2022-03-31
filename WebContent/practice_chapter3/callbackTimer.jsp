@@ -110,7 +110,7 @@ function stopTimer(){
 	
 	$('#stop_btn').on('click', function(){
 		
-		$('#start_btn').off(); // button을 종료시키는거고 interval은 별개이기때문에 종료되지 않음 clearInterval이라는게 있음.
+		$('#start_btn').clearInterval(vvvv); // button을 종료시키는거고 interval은 별개이기때문에 종료되지 않음 clearInterval이라는게 있음.
 		
 	})
 	
