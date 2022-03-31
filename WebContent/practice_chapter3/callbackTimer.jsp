@@ -85,9 +85,8 @@ let vvvv =	setInterval(function (){
 			hour ++;
 		}
 		
-		$('#second').text(second);
-		$('#minute').text(minute);
-		$('#hour').text(hour);
+		
+		
 		
 	}, 1000) // End setInterval
 
@@ -95,6 +94,17 @@ let vvvv =	setInterval(function (){
 	console.log(vvvv );
 	
 }
+
+
+function format(num){
+	   return  `${num <10 ? '0' : ''}${num}`
+	}
+
+$('#second').text(second);
+$('#minute').text(minute);
+$('#hour').text(hour);
+
+
 
 function stopTimer(){
 	
@@ -122,7 +132,7 @@ function stopTimer(){
 
 <input type="button" id="start_btn"  class="btns" value="시작" onclick="startTimer()">
 <input type="button" id="pause_btn" class="btns" value="일시정지">
-<input type="button" id="stop_btn" class="btns" value="종료">
+<input type="button" id="stop_btn" class="btns" value="종료" onclick="stopTimer()">
 
 </body>
 </html>
