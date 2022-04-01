@@ -110,7 +110,7 @@ var interval;
 
 
 function startTimer(){
-
+	console.log('started?');
 	second ++;
 	
 	if (second >= 60) {
@@ -154,8 +154,12 @@ function displayTime(second, minute, hour){
 /* ------------------------- btns event ---------------------------- */
 	
 $('#start_btn').on('click', function(){
-	startTimer();
-	interval = setInterval(startTimer, 1000);
+	
+	if (interval == null) {
+		startTimer();
+		interval = setInterval(startTimer, 1000);
+	}
+	
 })
 
 
@@ -169,6 +173,7 @@ $('#stop_btn').on('click', function(){
 	second = 0;
 	minute = 0;
 	hour = 0;
+	interval = null;
 	displayTime(second, minute, hour);
 })
 
