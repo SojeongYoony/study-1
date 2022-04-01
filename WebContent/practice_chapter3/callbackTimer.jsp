@@ -58,6 +58,10 @@
 <input type="button" id="pause_btn" class="btns" value="일시정지">
 <input type="button" id="stop_btn" class="btns" value="종료">
 
+<br>
+<br>
+
+<input type="text" id="value">
 
 
 
@@ -165,6 +169,7 @@ $('#start_btn').on('click', function(){
 
 $('#pause_btn').on('click', function(){
 	clearInterval(interval);
+	interval = null;
 })
 
 
