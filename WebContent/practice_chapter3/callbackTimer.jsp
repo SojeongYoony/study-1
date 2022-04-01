@@ -155,6 +155,11 @@ function displayTime(second, minute, hour){
 	
 }
 
+function reset(){
+	second = 0;
+	minute = 0;
+	hour = 0;
+}
 /* ------------------------- btns event ---------------------------- */
 	
 $('#start_btn').on('click', function(){
@@ -175,9 +180,7 @@ $('#pause_btn').on('click', function(){
 
 $('#stop_btn').on('click', function(){
 	clearInterval(interval); // button을 종료시키는거고 interval은 별개이기때문에 종료되지 않음 clearInterval이라는게 있음.
-	second = 0;
-	minute = 0;
-	hour = 0;
+	reset();
 	interval = null;
 	displayTime(second, minute, hour);
 })
