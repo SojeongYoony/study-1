@@ -30,6 +30,31 @@
 
 </style>
 
+
+</head>
+
+<body>
+
+
+
+
+
+<div id="time_box">
+
+	<div id="hour" class="time">00</div>
+	<div id="minute" class="time">00</div>
+	<div id="second" class="time">00</div>
+
+</div>
+
+<input type="button" id="start_btn"  class="btns" value="시작" >
+<input type="button" id="pause_btn" class="btns" value="일시정지">
+<input type="button" id="stop_btn" class="btns" value="종료">
+
+
+
+
+
 <script>
 // 
 
@@ -62,87 +87,97 @@ setTimeout(function (){
 	시작/일시정지/종료 버튼 - 시작/일시정지/종료 기능 (1,2,3)
 	타이머 시간표시
 	종료 시, 알람 표시하기
+	
+	TODO
+	실행되었을 경우, 시작버튼 동작 금지 
 */
 
 
 var second = 0;
 var minute = 0;
 var hour = 0;
-
-
-// inline level로 함수를 등록하지 않음
-
-function format(num){
-//	   return  `${num <10 ? '0' : ''}${num}`
-	   return  (num < 10 ? '0' : '') + num
-}
+var interval;
 
 
 function startTimer(){
+
+	console.log('초세기 시작?');
+	second ++;
+	
+	if (second >= 60) {
+		second = 0;
+		minute ++;
+	}
+	
+	if (minute >= 60) {
+		minute = 0;
+		hour ++;
+	}
+	
+	displayTime(second, minute, hour);
+}
 	
 
-let vvvv =	setInterval(function (){
-		
-		second ++;
-		
-		if (second >= 60) {
-			second = 0;
-			minute ++;
-		}
-		
-		if (minute >= 60) {
-			minute = 0;
-			hour ++;
-		}
-		
-		$('#second').text(format(second));
-		$('#minute').text(format(minute));
-		$('#hour').text(format(hour));
-		
-	}, 1000) // End setInterval
+/* ------------------------- format / display ---------------------------- */
 
-	
-	console.log(vvvv);
-	
+
+function format(num){
+	   return  (num < 10 ? '0' : '') + num
 }
 
-function stopTimer(){
+function displayTime(second, minute, hour){
 	
-	$('#stop_btn').on('click', function(){
-		
-		$('#start_btn').clearInterval(vvvv); // button을 종료시키는거고 interval은 별개이기때문에 종료되지 않음 clearInterval이라는게 있음.
-		
-	})
+	$('#second').text(format(second));
+	$('#minute').text(format(minute));
+	$('#hour').text(format(hour));
 	
 }
 
 
 
+/* ------------------------- btns event ---------------------------- */
+	
+$('#start_btn').on('click', function(){
+	startTimer();
+	interval = setInterval(startTimer, 1000);
+
+})
 
 
+$('#pause_btn').on('click', function(){
+	clearInterval(interval);
+})
 
-function displayTime(){
-}
+
+$('#stop_btn').on('click', function(){
+	clearInterval(interval); // button을 종료시키는거고 interval은 별개이기때문에 종료되지 않음 clearInterval이라는게 있음.
+	second = 0;
+	minute = 0;
+	hour = 0;
+	displayTime(second, minute, hour);
+})
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+$(document).ready(function(){
+	
+}) // ready function
+
+// function stopTimer(){
+// }
+
 
 
 
 </script>
-
-
-</head>
-<body>
-
-<div id="time_box">
-
-	<div id="hour" class="time">00</div>
-	<div id="minute" class="time">00</div>
-	<div id="second" class="time">00</div>
-
-</div>
-
-<input type="button" id="start_btn"  class="btns" value="시작" onclick="startTimer()">
-<input type="button" id="pause_btn" class="btns" value="일시정지">
-<input type="button" id="stop_btn" class="btns" value="종료" onclick="stopTimer()">
-
 </body>
 </html>
