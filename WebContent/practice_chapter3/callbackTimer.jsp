@@ -35,7 +35,14 @@
 
 <body>
 
+<!-- 
 
+	web server / WAS
+	browser -> HTML을 읽는다
+
+	
+
+ -->
 
 
 
@@ -56,7 +63,10 @@
 
 
 <script>
-// 
+// request Animation / interval : 비동기로 작동 됨 (실행되는 동안 다른 걸 실행해도 각각 실행이 가능 함)
+// 멀티 쓰레드의 개념.
+
+// requestAnimation은 interval 주기를 정할 수 없고 setInterval은 밀리세컨 단위로 정할 수 있음
 
 
 //타이머 시작을 하면 함수 호출
@@ -79,7 +89,7 @@ setTimeout(function (){
 	4. 알람 등록
 
 	이벤트 - 콜백
-	1. 알람 발생 이벤트		-- 종료 시, 알람 울리는 기능..?
+	1. 알람 발생 이벤트		-- 사용자가 지정한 시간마다 알람발생
 	2. 시간 업데이트 이벤트 -- 현재시간 반환..?
 
 	---------------------------------
@@ -101,7 +111,6 @@ var interval;
 
 function startTimer(){
 
-	console.log('초세기 시작?');
 	second ++;
 	
 	if (second >= 60) {
@@ -116,7 +125,16 @@ function startTimer(){
 	
 	displayTime(second, minute, hour);
 }
+
+
+
+let _setTime = 5000;
+setTimeout(function (){
 	
+	alert(_setTime, '시간이 되었다.'); // 여기다가 종료시 일어날 이벤트.
+	
+}, _setTime);
+
 
 /* ------------------------- format / display ---------------------------- */
 
@@ -133,14 +151,11 @@ function displayTime(second, minute, hour){
 	
 }
 
-
-
 /* ------------------------- btns event ---------------------------- */
 	
 $('#start_btn').on('click', function(){
 	startTimer();
 	interval = setInterval(startTimer, 1000);
-
 })
 
 
@@ -176,6 +191,10 @@ $(document).ready(function(){
 // }
 
 
+
+
+
+// frame 초당 실행되는 수
 
 
 </script>
